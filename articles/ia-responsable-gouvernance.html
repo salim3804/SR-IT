@@ -67,6 +67,22 @@ h1{font-size:50px;line-height:1.06;letter-spacing:-.035em;margin:14px 0 18px}
 .footer{border-top:1px solid var(--line);background:white;padding:26px 0;color:#6f7f96;font-size:13px}
 @media(max-width:950px){.hero .grid,.article-layout{grid-template-columns:1fr}.aside{position:relative;top:auto}.compare{grid-template-columns:1fr}.hero-visual{max-width:720px}.nav{display:none}}
 @media(max-width:620px){h1{font-size:37px}.article{padding:23px}.logo{height:64px}.topbar .inner{min-height:78px}}
+
+.mobile-menu-toggle{display:none;width:44px;height:44px;border:1px solid var(--line);border-radius:11px;background:#fff;align-items:center;justify-content:center;cursor:pointer}
+.mobile-menu-toggle:before{content:"☰";font-size:22px;color:var(--navy)}
+.mobile-nav{display:none;position:absolute;left:16px;right:16px;top:calc(100% + 8px);background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:0 16px 36px rgba(11,35,71,.14);padding:8px;z-index:60}
+.mobile-nav.open{display:block}.mobile-nav a{display:block;padding:11px 12px;border-radius:9px;font-weight:800;color:var(--ink)}
+@media(max-width:950px){
+ .topbar .inner{position:relative;gap:9px}
+ .mobile-menu-toggle{display:flex}
+ .topbar .btn.primary{white-space:nowrap;padding:10px 12px;font-size:13px}
+ .logo{height:56px}
+}
+@media(max-width:520px){
+ .logo{height:48px}
+ .topbar .btn.primary{font-size:12px;padding:9px 10px;max-width:142px}
+}
+
 </style>
 </head>
 <body>
@@ -79,7 +95,7 @@ h1{font-size:50px;line-height:1.06;letter-spacing:-.035em;margin:14px 0 18px}
       <a href="../index.html#catalogue-formations">Formations</a>
       <a href="../index.html#diagnostic">Diagnostic</a>
     </nav>
-    <a class="btn primary" href="../index.html#top-contact">Parler de votre besoin</a>
+    <button class="mobile-menu-toggle" type="button" aria-label="Ouvrir le menu"></button><a class="btn primary" href="../index.html#top-contact">Parler de votre besoin</a><div class="mobile-nav" id="mobileNav"><a href="../index.html#offre">Offre</a><a href="../index.html#technologies">Technologies</a><a href="../index.html#catalogue-formations">Formations</a><a href="../index.html#diagnostic">Diagnostic IA</a></div>
   </div>
 </header>
 
@@ -146,4 +162,32 @@ h1{font-size:50px;line-height:1.06;letter-spacing:-.035em;margin:14px 0 18px}
  </div>
 </main>
 <footer class="footer"><div class="container">SR-IT · Conseil, audit, formation et solutions IA · IA in action. Human In The Loop</div></footer>
+
+<script>
+(function(){
+  const toggle = document.querySelector('.mobile-menu-toggle');
+  const menu = document.getElementById('mobileNav');
+  if(!toggle || !menu) return;
+
+  toggle.addEventListener('click', function(){
+    const open = menu.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+
+  menu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      menu.classList.remove('open');
+      toggle.setAttribute('aria-expanded','false');
+    });
+  });
+
+  document.addEventListener('click', function(e){
+    if(!menu.classList.contains('open')) return;
+    if(menu.contains(e.target) || toggle.contains(e.target)) return;
+    menu.classList.remove('open');
+    toggle.setAttribute('aria-expanded','false');
+  });
+})();
+</script>
+
 </body></html>
