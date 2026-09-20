@@ -1291,6 +1291,98 @@ section{scroll-margin-top:88px}
   .tech-card .media{height:180px !important}
 }
 
+
+/* ===== V35 — carte éditoriale Attention Is All You Need ===== */
+.attention-section{margin-top:24px;margin-bottom:14px}
+.attention-feature{
+  display:grid;
+  grid-template-columns:auto minmax(0,1fr) auto;
+  align-items:center;
+  gap:22px;
+  width:100%;
+  padding:24px 26px;
+  border:1px solid #d5e2f1;
+  border-radius:20px;
+  background:
+    radial-gradient(circle at 100% 0%,rgba(35,104,232,.10),transparent 30%),
+    linear-gradient(135deg,#ffffff,#f8fbff);
+  box-shadow:0 16px 38px rgba(11,35,71,.07);
+  color:inherit;
+  text-decoration:none;
+  transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;
+}
+.attention-feature:hover{
+  transform:translateY(-3px);
+  box-shadow:0 22px 48px rgba(11,35,71,.11);
+  border-color:#b9cfea;
+}
+.attention-badge{
+  width:78px;height:78px;border-radius:18px;
+  display:grid;place-items:center;text-align:center;
+  padding:10px;
+  background:#fff3e8;
+  color:#d95f00;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.09em;
+  line-height:1.2;
+}
+.attention-copy{min-width:0}
+.attention-eyebrow{
+  margin-bottom:5px;
+  color:#667b98;
+  font-size:12px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.07em;
+}
+.attention-copy h3{
+  margin:0 0 7px;
+  font-size:clamp(22px,2.25vw,31px);
+  line-height:1.12;
+  letter-spacing:-.025em;
+  color:#0d2447;
+}
+.attention-copy p{
+  margin:0;
+  max-width:790px;
+  color:#405979;
+  font-size:15.5px;
+  line-height:1.65;
+}
+.attention-read{
+  display:inline-flex;
+  gap:8px;
+  align-items:center;
+  margin-top:12px;
+  color:#1f62df;
+  font-size:14px;
+  font-weight:900;
+}
+.attention-mark{
+  min-width:158px;
+  padding:15px 16px;
+  border-left:1px solid #dbe6f3;
+  display:grid;
+  justify-items:center;
+  gap:3px;
+  color:#173a69;
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.1em;
+}
+.attention-mark strong{font-size:25px;color:#ef7a2c;line-height:1}
+
+@media(max-width:760px){
+  .attention-feature{grid-template-columns:auto minmax(0,1fr);padding:20px;gap:16px}
+  .attention-mark{display:none}
+  .attention-badge{width:64px;height:64px;border-radius:15px;font-size:10px}
+}
+@media(max-width:480px){
+  .attention-feature{grid-template-columns:1fr}
+  .attention-badge{width:auto;height:auto;display:inline-flex;justify-self:start;padding:7px 10px;border-radius:999px}
+}
+
 </style>
 </head>
 <body>
@@ -1565,16 +1657,24 @@ section{scroll-margin-top:88px}
 </a>
 
 </section>
-<section class="container">
-  <a class="card-link" href="articles/attention-is-all-you-need.html">
-    <div class="service" style="margin-top:18px">
-      <span class="tag">Culture IA</span>
+
+<section class="container attention-section">
+  <a class="attention-feature" href="articles/attention-is-all-you-need.html">
+    <div class="attention-badge">CULTURE IA</div>
+    <div class="attention-copy">
+      <div class="attention-eyebrow">Transformer · Self-attention · 2017</div>
       <h3>“Attention Is All You Need” : le papier qui a changé l’IA</h3>
       <p>Comprendre simplement le Transformer, la self-attention et pourquoi cette architecture est devenue centrale dans l’IA générative moderne.</p>
-      <span class="train-read">Lire l’article →</span>
+      <span class="attention-read">Lire l’article <span aria-hidden="true">→</span></span>
+    </div>
+    <div class="attention-mark" aria-hidden="true">
+      <span>ATTENTION</span>
+      <strong>→</strong>
+      <span>TRANSFORMER</span>
     </div>
   </a>
 </section>
+
 
 
 

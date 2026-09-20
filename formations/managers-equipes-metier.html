@@ -104,12 +104,6 @@ h1{font-size:50px;line-height:1.06;letter-spacing:-.035em;margin:14px 0 18px}.he
 }
 
 
-.hero-visual{background:linear-gradient(135deg,#fff8f1,#eef5ff);display:flex;align-items:center;justify-content:center;min-height:320px}
-.hero-visual .audience-mark{width:84%;max-width:420px;padding:28px;border-radius:18px;background:#fff;border:1px solid var(--line);box-shadow:0 14px 32px rgba(10,23,49,.06)}
-.audience-mark .big{font-size:48px;font-weight:900;color:#163d75;line-height:1}
-.audience-mark .orange{color:#ef7a2c}
-.audience-mark p{margin:10px 0 0;color:#536681;font-size:16px}
-
 /* ===== V33 — correctifs d'affichage globaux ===== */
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;overflow-x:hidden}
@@ -158,6 +152,106 @@ section{scroll-margin-top:88px}
   }
 }
 
+
+/* ===== V35 — visuel professionnel des parcours ===== */
+.hero-visual{
+  min-height:340px !important;
+  padding:30px !important;
+  background:
+    radial-gradient(circle at 100% 0%,rgba(35,104,232,.12),transparent 32%),
+    linear-gradient(145deg,#ffffff,#eef4fb) !important;
+  border:1px solid rgba(255,255,255,.55);
+}
+.executive-panel{
+  width:100%;
+  max-width:470px;
+  padding:26px;
+  border-radius:20px;
+  background:rgba(255,255,255,.96);
+  border:1px solid #d6e2f0;
+  box-shadow:0 18px 42px rgba(11,35,71,.10);
+  color:#0c1f3d;
+}
+.executive-panel .ep-label{
+  color:#d9650d;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.11em;
+  text-transform:uppercase;
+}
+.executive-panel h3{
+  margin:9px 0 8px;
+  color:#102d56;
+  font-size:27px;
+  line-height:1.12;
+  letter-spacing:-.025em;
+}
+.executive-panel .ep-desc{
+  margin:0 0 20px;
+  color:#526987;
+  font-size:14px;
+  line-height:1.55;
+}
+.executive-panel .ep-list{
+  display:grid;
+  gap:9px;
+}
+.executive-panel .ep-item{
+  display:grid;
+  grid-template-columns:38px minmax(0,1fr);
+  align-items:center;
+  gap:11px;
+  padding:10px 12px;
+  border-radius:12px;
+  background:#f6f9fd;
+  border:1px solid #e1e9f3;
+}
+.executive-panel .ep-num{
+  width:34px;height:34px;
+  border-radius:10px;
+  display:grid;place-items:center;
+  background:#eaf2ff;
+  color:#205fcf;
+  font-size:11px;
+  font-weight:900;
+}
+.executive-panel .ep-item b{
+  color:#17375f;
+  font-size:14px;
+}
+.executive-panel .ep-footer{
+  margin-top:18px;
+  padding-top:15px;
+  border-top:1px solid #e2eaf3;
+  color:#70809a;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+@media(max-width:900px){
+  .hero-visual{min-height:auto !important;padding:22px !important}
+  .executive-panel{max-width:none}
+}
+@media(max-width:520px){
+  .hero-visual{padding:16px !important}
+  .executive-panel{padding:20px}
+  .executive-panel h3{font-size:23px}
+}
+
+
+/* ===== V35 — harmonisation responsive ===== */
+@media(max-width:900px){
+  .hero .grid{grid-template-columns:1fr !important}
+  .article-layout{grid-template-columns:1fr !important}
+}
+@media(max-width:520px){
+  .hero{padding:38px 0 32px !important}
+  .hero p{font-size:16px !important}
+  .article{padding:22px !important}
+}
+
 </style>
 </head>
 <body>
@@ -182,10 +276,14 @@ section{scroll-margin-top:88px}
       <p>Utiliser l’IA générative au quotidien, produire mieux, gagner du temps et adopter des méthodes de travail fiables et reproductibles.</p>
       <div class="meta"><span>Managers</span><span>Métiers</span><span>Productivité</span></div>
     </div>
+    
     <div class="hero-visual">
-      <div class="audience-mark">
-        <div class="big">SR-<span class="orange">IT</span></div>
-        <p>Des contenus adaptés au rôle, au niveau de maturité et aux cas d’usage réels de l’organisation.</p>
+      <div class="executive-panel">
+        <div class="ep-label">PARCOURS MANAGERS & MÉTIERS</div>
+        <h3>Transformer les usages du quotidien</h3>
+        <p class="ep-desc">Des méthodes concrètes pour gagner du temps, améliorer la qualité et encadrer les usages de l’IA dans les équipes.</p>
+        <div class="ep-list"><div class="ep-item"><span class="ep-num">01</span><b>Usages métier</b></div><div class="ep-item"><span class="ep-num">02</span><b>Prompting & productivité</b></div><div class="ep-item"><span class="ep-num">03</span><b>Adoption & bonnes pratiques</b></div></div>
+        <div class="ep-footer">Comprendre · Pratiquer · Diffuser</div>
       </div>
     </div>
   </div>
