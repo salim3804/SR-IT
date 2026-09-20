@@ -247,6 +247,16 @@ section{scroll-margin-top:88px}
   .article{padding:22px !important}
 }
 
+
+/* V47 — illustration homogène grand format */
+.hero .container{width:min(1580px,calc(100% - 24px)) !important}
+.hero .grid{grid-template-columns:minmax(0,.58fr) minmax(840px,1.42fr) !important;gap:24px !important;align-items:center !important}
+.hero .grid>div:first-child{max-width:540px !important}
+.hero-visual.article-illustration{width:100% !important;max-width:none !important;padding:0 !important;margin:0 !important;background:#fff !important;border:1px solid rgba(215,226,240,.95) !important;border-radius:24px !important;overflow:hidden !important;box-shadow:0 24px 58px rgba(8,28,58,.18) !important}
+.hero-visual.article-illustration img{display:block !important;width:100% !important;height:auto !important;max-width:none !important;max-height:none !important;object-fit:contain !important;background:#fff !important}
+@media(max-width:1200px){.hero .grid{grid-template-columns:minmax(0,.78fr) minmax(620px,1.20fr) !important}}
+@media(max-width:900px){.hero .grid{grid-template-columns:1fr !important}.hero .grid>div:first-child{max-width:none !important}.hero-visual.article-illustration{max-width:980px !important;margin:0 auto !important}}
+
 </style>
 </head>
 <body>
@@ -271,9 +281,7 @@ section{scroll-margin-top:88px}
       <p>Transformer une idée en projet pilotable avec périmètre, KPI, données, risques, critères de succès et plan de livraison.</p>
       <div class="meta"><span>POC</span><span>KPI</span><span>Go / No-Go</span></div>
     </div>
-    <div class="hero-visual visual-generic"><div class="visual-stack"><div class="row"><div class="num">01</div><div><b>Cadrer</b><span>Objectifs</span></div></div><div class="row"><div class="num">02</div><div><b>Tester</b><span>POC mesurable</span></div></div><div class="row"><div class="num">03</div><div><b>Décider</b><span>Go / No-Go</span></div></div></div></div>
-  </div>
-</section>
+    <div class="hero-visual article-illustration"><img src="../assets/illustration-roadmap-cadrage-ia.svg" alt="Illustration roadmap cadrage ia"></div></div></section>
 
 <main class="main">
 <div class="container article-layout">
