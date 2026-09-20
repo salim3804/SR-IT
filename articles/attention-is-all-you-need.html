@@ -1,10 +1,12 @@
 <!doctype html>
 <html lang="fr">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Gouvernance &amp; conformité IA — SR-IT</title>
-<meta name="description" content="Définir les responsabilités, les règles, les contrôles et la traçabilité nécessaires à une utilisation maîtrisée de l’IA.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Attention Is All You Need : le papier qui a lancé les Transformers — SR-IT</title>
+<meta name="description" content="Comprendre simplement le papier Attention Is All You Need, l’architecture Transformer et son impact sur l’IA générative moderne.">
 <style>
+
 :root{
   --navy:#071a36;--navy2:#102e58;--blue:#2368e8;--cyan:#24bfdc;
   --orange:#ef7a2c;--orange-soft:#fff4ea;--ink:#0c1f3d;--soft:#536681;
@@ -196,45 +198,10 @@ section{scroll-margin-top:88px}
 }
 
 
-/* ===== V33 — slogans éditoriaux ===== */
-.brand-manifesto{
-  margin:34px 0 10px;
-  padding:22px 24px;
-  border:1px solid #dbe5f2;
-  border-radius:18px;
-  background:linear-gradient(135deg,#0e2c52,#174d83);
-  color:#fff;
-  box-shadow:0 16px 38px rgba(8,27,56,.10);
-}
-.brand-manifesto .en{
-  display:block;
-  font-size:clamp(25px,4vw,42px);
-  line-height:1.05;
-  font-weight:900;
-  letter-spacing:-.02em;
-}
-.brand-manifesto .fr{
-  display:block;
-  margin-top:7px;
-  color:#cfe1ff;
-  font-size:14px;
-  font-weight:700;
-}
-.turning-point{
-  margin:28px 0;
-  padding:18px 22px;
-  border-left:4px solid #f28a3b;
-  border-radius:0 14px 14px 0;
-  background:#fff7ef;
-  color:#17375f;
-  font-weight:900;
-  font-size:clamp(20px,3vw,30px);
-}
-@media(max-width:520px){
-  .brand-manifesto{padding:18px}
-  .turning-point{padding:16px 17px}
-}
-
+.paper-box{padding:22px;border:1px solid var(--line);border-radius:16px;background:#f8fbff}
+.paper-box a{font-weight:900}
+.quote-brand{margin:28px 0;padding:24px;border-radius:18px;background:linear-gradient(135deg,#0e2c52,#174d83);color:#fff}
+.quote-brand strong{display:block;font-size:30px;line-height:1.05}
 </style>
 </head>
 <body>
@@ -254,53 +221,64 @@ section{scroll-margin-top:88px}
 <section class="hero">
   <div class="container grid">
     <div>
-      <span class="kicker">Gouvernance</span>
-      <h1>Gouvernance &amp; conformité IA</h1>
-      <p>Définir les responsabilités, les règles, les contrôles et la traçabilité nécessaires à une utilisation maîtrisée de l’IA.</p>
-      <div class="meta"><span>NIST AI RMF</span><span>AI Act</span><span>Human In The Loop</span></div>
+      <span class="kicker">Culture IA</span>
+      <h1>“Attention Is All You Need” : pourquoi ce papier a changé l’IA</h1>
+      <p>En 2017, une équipe de chercheurs présente le Transformer, une architecture fondée sur les mécanismes d’attention. Cette idée est devenue l’un des socles techniques des grands modèles de langage modernes.</p>
+      <div class="meta"><span>Transformer</span><span>Self-attention</span><span>2017</span></div>
     </div>
-    <div class="hero-visual visual-generic"><div class="visual-stack"><div class="row"><div class="num">01</div><div><b>Govern</b><span>Rôles</span></div></div><div class="row"><div class="num">02</div><div><b>Measure</b><span>Tests</span></div></div><div class="row"><div class="num">03</div><div><b>Manage</b><span>Suivi</span></div></div></div></div>
+    <div class="paper-box">
+      <h3>Le papier original</h3>
+      <p><strong>Attention Is All You Need</strong>, Ashish Vaswani et al., NIPS 2017.</p>
+      <p><a href="https://research.google/pubs/attention-is-all-you-need/" target="_blank" rel="noopener">Lire la publication officielle sur Google Research →</a></p>
+    </div>
   </div>
 </section>
 
 <main class="main">
 <div class="container article-layout">
 <article class="article">
+<p class="lead">Avant le Transformer, de nombreux systèmes de traitement de séquences reposaient surtout sur des réseaux récurrents ou convolutionnels. Les auteurs proposent une architecture qui s’appuie directement sur l’attention pour traiter les relations entre les éléments d’une séquence.</p>
 
-<p class="lead">La gouvernance IA organise les règles, rôles, contrôles et preuves nécessaires pour utiliser l’IA de manière responsable et conforme au niveau de risque.</p>
-<div class="callout"><strong>Une gouvernance proportionnée</strong>Un assistant de reformulation interne ne nécessite pas le même niveau de contrôle qu’un système influençant une décision RH, financière ou réglementaire.</div>
-<h2>Les piliers</h2>
-<div class="compare"><div class="box"><b>Govern</b>Politiques, rôles et responsabilités.</div><div class="box"><b>Measure</b>Tests, métriques, biais, robustesse et qualité.</div><div class="box"><b>Manage</b>Décisions, incidents, surveillance et amélioration.</div></div>
-<h2>AI Act et AI literacy</h2>
-<p>L’AI Act maintient une obligation de développer un niveau approprié de maîtrise de l’IA pour les personnels et autres personnes utilisant des systèmes d’IA pour le compte d’un fournisseur ou d’un déployeur. Les obligations de transparence prévues à l’article 50 s’appliquent depuis août 2026 pour certains systèmes.</p>
-<h2>Contrôles concrets</h2>
-<ul><li>Charte d’usage et outils autorisés.</li><li>Classification des données et droits d’accès.</li><li>Validation humaine pour les actions sensibles.</li><li>Logs, traçabilité et gestion des versions.</li><li>Procédure d’incident et réévaluation.</li></ul>
+<h2>1. L’idée centrale : regarder les relations importantes</h2>
+<p>La self-attention permet à chaque élément d’une séquence de pondérer les autres éléments selon leur pertinence. Pour une phrase, le modèle peut ainsi établir des relations entre des mots éloignés sans devoir les traiter strictement les uns après les autres.</p>
+
+<h2>2. Pourquoi le Transformer a été déterminant</h2>
+<ul>
+<li>Il permet un traitement fortement parallélisable pendant l’entraînement.</li>
+<li>Il modélise efficacement les dépendances entre éléments éloignés.</li>
+<li>Il fournit une architecture réutilisable et extensible.</li>
+<li>Il a ouvert la voie à de nombreuses familles de modèles modernes utilisées en traitement du langage et au-delà.</li>
+</ul>
+
+<h2>3. Ce que cela change pour l’entreprise</h2>
+<p>L’intérêt n’est pas de maîtriser toutes les équations du papier. Pour une entreprise, il est surtout utile de comprendre que les assistants, moteurs RAG et agents actuels reposent sur des progrès architecturaux qui permettent de mieux exploiter le contexte, les documents et les instructions.</p>
+
+<div class="quote-brand">
+  <strong>Curiosity is all you need.</strong>
+  <p>Chez SR-IT, cette formule résume une conviction : comprendre les principes permet de mieux choisir les usages, les outils et les architectures.</p>
+</div>
+
+<h2>4. Attention ne veut pas dire fiabilité automatique</h2>
+<p>Un modèle Transformer peut produire des résultats impressionnants tout en restant sujet aux erreurs, aux hallucinations, aux limites de contexte ou à de mauvaises données d’entrée. C’est pourquoi architecture, tests, gouvernance et validation humaine restent essentiels.</p>
 
 <div class="bottom-cta">
-  <strong>Vous souhaitez appliquer cette démarche à votre entreprise ?</strong>
-  <p>Le diagnostic SR-IT permet de qualifier le besoin, prioriser les cas d’usage et identifier le niveau d’accompagnement adapté.</p>
+  <strong>Le virage de l’IA se prend maintenant.</strong>
+  <p>Le bon point de départ n’est pas de choisir un modèle : c’est d’identifier ce que l’IA peut réellement améliorer dans votre organisation.</p>
   <a class="btn primary" href="../index.html#diagnostic">Faire le diagnostic IA</a>
 </div>
 </article>
+
 <aside class="aside">
   <div class="aside-card">
-    <h3>Nos autres sujets</h3>
+    <h3>À lire aussi</h3>
     <a href="strategie-ia.html">Stratégie IA</a>
-    <a href="adoption-ia.html">Adoption</a>
-    <a href="integration-ia.html">Intégration</a>
-    <a href="audit-diagnostic-ia.html">Audit IA & diagnostic</a>
-    <a href="roadmap-cadrage-ia.html">Roadmap & cadrage</a>
-    <a href="formations-ia-entreprise.html">Formations IA</a>
-    <a href="automatisation-assistants-ia.html">Automatisation & assistants</a>
-    <a href="gouvernance-conformite-ia.html">Gouvernance & conformité</a>
-    <a href="accompagnement-continu-ia.html">Accompagnement continu</a>
-  </div>
-  <div class="aside-card source-list">
-    <h3>Sources & repères</h3><ul><li><a href="https://www.pmi.org/certifications/ai-project-management-cpmai" target="_blank" rel="noopener">PMI — PMI-CPMAI</a></li><li><a href="https://www.pmi.org/blog/6-stages-to-run-a-successful-ai-project" target="_blank" rel="noopener">PMI — 6 phases d’un projet IA</a></li><li><a href="https://www.nist.gov/itl/ai-risk-management-framework/nist-ai-rmf-playbook" target="_blank" rel="noopener">NIST — AI RMF Playbook</a></li><li><a href="https://digital-strategy.ec.europa.eu/en/policies/ai-talent-skills-and-literacy" target="_blank" rel="noopener">Commission européenne — AI literacy</a></li></ul>
+    <a href="integration-ia.html">Intégration IA</a>
+    <a href="agents-ia-orchestration.html">Agents IA & orchestration</a>
+    <a href="mcp-connexion-outils.html">MCP & connexion aux outils</a>
   </div>
 </aside>
 </div>
 </main>
-
-<section class="container"><div class="brand-manifesto" style="margin-bottom:28px"><span class="en">Curiosity is all you need.</span><span class="fr">La curiosité ouvre la voie. La méthode transforme l’idée en valeur.</span></div></section><footer class="footer"><div class="container">SR-IT · Conseil • Audit • Formation • Automatisation • Accompagnement IA</div></footer>
-</body></html>
+<footer class="footer"><div class="container">SR-IT · Conseil • Audit • Formation • Automatisation • Accompagnement IA</div></footer>
+</body>
+</html>

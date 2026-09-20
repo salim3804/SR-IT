@@ -1155,6 +1155,142 @@ body{
 .card-link .pillar,.card-link .service,.card-link .format{height:100%;transition:transform .2s ease,box-shadow .2s ease}
 .card-link:hover .pillar,.card-link:hover .service,.card-link:hover .format{transform:translateY(-3px);box-shadow:0 18px 38px rgba(10,23,49,.09)}
 
+
+/* ===== V33 — correctifs d'affichage globaux ===== */
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{overflow-x:hidden}
+img,svg,video{max-width:100%;height:auto}
+a{overflow-wrap:anywhere}
+section{scroll-margin-top:88px}
+
+@media (max-width: 900px){
+  .container{
+    width:auto !important;
+    max-width:none !important;
+    margin-left:18px !important;
+    margin-right:18px !important;
+  }
+  .hero .grid,
+  .article-layout,
+  .training-wrap,
+  .smart-shell,
+  .contact-grid,
+  .usecase-grid,
+  .services-grid,
+  .pillars,
+  .formats-grid,
+  .program-grid{
+    grid-template-columns:1fr !important;
+  }
+  h1{font-size:clamp(34px,9vw,54px) !important;line-height:1.02 !important}
+  h2{font-size:clamp(28px,7.5vw,42px) !important;line-height:1.08 !important}
+  h3{line-height:1.2 !important}
+  p,li{overflow-wrap:anywhere}
+  .hero{padding-top:34px !important}
+  .hero .grid{gap:26px !important}
+  .smart-form,.smart-aside,.training-side,.article,.aside-card{min-width:0 !important}
+  input,textarea,select,button{max-width:100% !important}
+}
+
+@media (max-width: 520px){
+  .container{
+    margin-left:16px !important;
+    margin-right:16px !important;
+  }
+  section{padding-left:0 !important;padding-right:0 !important}
+  .card,.service,.pillar,.format,.train,.program,.smart-form,.smart-aside,.article,.aside-card{
+    border-radius:16px !important;
+  }
+}
+
+
+/* ===== V33 — slogans éditoriaux ===== */
+.brand-manifesto{
+  margin:34px 0 10px;
+  padding:22px 24px;
+  border:1px solid #dbe5f2;
+  border-radius:18px;
+  background:linear-gradient(135deg,#0e2c52,#174d83);
+  color:#fff;
+  box-shadow:0 16px 38px rgba(8,27,56,.10);
+}
+.brand-manifesto .en{
+  display:block;
+  font-size:clamp(25px,4vw,42px);
+  line-height:1.05;
+  font-weight:900;
+  letter-spacing:-.02em;
+}
+.brand-manifesto .fr{
+  display:block;
+  margin-top:7px;
+  color:#cfe1ff;
+  font-size:14px;
+  font-weight:700;
+}
+.turning-point{
+  margin:28px 0;
+  padding:18px 22px;
+  border-left:4px solid #f28a3b;
+  border-radius:0 14px 14px 0;
+  background:#fff7ef;
+  color:#17375f;
+  font-weight:900;
+  font-size:clamp(20px,3vw,30px);
+}
+@media(max-width:520px){
+  .brand-manifesto{padding:18px}
+  .turning-point{padding:16px 17px}
+}
+
+
+.title-link{color:inherit;text-decoration:none}
+.title-link:hover{color:#245fd8}
+
+
+/* ===== V34 — correction structure cartes et responsive ===== */
+.card-link{display:block !important;min-width:0 !important;color:inherit !important;text-decoration:none !important}
+.pillars>.card-link,.service-grid>.card-link,.formats>.card-link{height:100% !important}
+.pillars>.card-link>.pillar,
+.service-grid>.card-link>.service,
+.formats>.card-link>.format{height:100% !important;width:100% !important}
+
+.service-grid{grid-template-columns:repeat(2,minmax(0,1fr)) !important}
+.pillars{grid-template-columns:repeat(3,minmax(0,1fr)) !important}
+.formats{grid-template-columns:repeat(3,minmax(0,1fr)) !important}
+
+.service>div:last-child{min-width:0 !important}
+.service p,.service li,.pillar p,.format li{word-break:normal !important;overflow-wrap:normal !important;hyphens:auto}
+
+/* Le schéma gouvernance comportait du texte rogné dans l'image source : cadrage plus propre */
+.tech-grid>.tech-card-link:nth-child(3) .media img{
+  object-fit:cover !important;
+  object-position:center 18% !important;
+}
+
+/* Cartes formation */
+.train-link{display:flex !important;flex-direction:column !important}
+.train-link .train-read{margin-top:auto !important;padding-top:12px !important}
+
+@media(max-width:900px){
+  .pillars,.service-grid,.formats{grid-template-columns:1fr !important}
+  .service{grid-template-columns:68px minmax(0,1fr) !important}
+}
+
+@media(max-width:520px){
+  .service{
+    grid-template-columns:1fr !important;
+    gap:14px !important;
+    padding:20px !important;
+  }
+  .service .ico{width:54px !important;height:54px !important;border-radius:16px !important}
+  .service h3{font-size:22px !important}
+  .service p,.service li{font-size:15px !important;line-height:1.65 !important}
+  .pillar,.format{padding:20px !important}
+  .tech-card .media{height:180px !important}
+}
+
 </style>
 </head>
 <body>
@@ -1259,6 +1395,13 @@ body{
 </div>
   </div>
 </section>
+<section class="container" aria-label="Manifeste SR-IT">
+  <div class="brand-manifesto">
+    <span class="en">Curiosity is all you need.</span>
+    <span class="fr">Comprendre, tester, apprendre — puis transformer l’IA en résultats concrets.</span>
+  </div>
+</section>
+
 
 <div class="proof-strip">
   <div class="container">
@@ -1280,10 +1423,16 @@ body{
       <p>Audit, formation, cadrage et mise en œuvre : chaque mission part de vos processus, de vos contraintes et des résultats attendus. L’objectif est d’identifier les usages réellement utiles, puis de les déployer avec un niveau de maîtrise adapté à votre organisation.</p>
     </div>
     <div class="pillars">
-      <a class="card-link" href="articles/strategie-ia.html"><a class="card-link" href="articles/adoption-ia.html"><a class="card-link" href="articles/integration-ia.html"><div class="pillar"><div class="n">Pilier 01</div><h3>Stratégie</h3><p>Clarifier vos objectifs, cartographier les processus, prioriser les cas d’usage et construire une feuille de route réaliste.</p></div></a>
-      <div class="pillar"><div class="n">Pilier 02</div><h3>Adoption</h3><p>Faire monter les équipes en compétence, sécuriser les pratiques et ancrer des usages utiles dans le quotidien de travail.</p></div></a>
-      <div class="pillar"><div class="n">Pilier 03</div><h3>Intégration</h3><p>Connecter l’IA aux outils existants, concevoir des assistants métier et transformer les idées en solutions opérationnelles.</p></div></a>
-    </div>
+  <a class="card-link" href="articles/strategie-ia.html">
+    <div class="pillar"><div class="n">Pilier 01</div><h3>Stratégie</h3><p>Clarifier vos objectifs, cartographier les processus, prioriser les cas d’usage et construire une feuille de route réaliste.</p></div>
+  </a>
+  <a class="card-link" href="articles/adoption-ia.html">
+    <div class="pillar"><div class="n">Pilier 02</div><h3>Adoption</h3><p>Faire monter les équipes en compétence, sécuriser les pratiques et ancrer des usages utiles dans le quotidien de travail.</p></div>
+  </a>
+  <a class="card-link" href="articles/integration-ia.html">
+    <div class="pillar"><div class="n">Pilier 03</div><h3>Intégration</h3><p>Connecter l’IA aux outils existants, concevoir des assistants métier et transformer les idées en solutions opérationnelles.</p></div>
+  </a>
+</div>
   </div>
 </section>
 
@@ -1295,79 +1444,25 @@ body{
       <p>Une palette de prestations couvrant la transformation IA de bout en bout, avec un langage simple pour les décideurs et une logique claire pour les équipes opérationnelles.</p>
     </div>
     <div class="service-grid">
-      <a class="card-link" href="articles/audit-diagnostic-ia.html"><a class="card-link" href="articles/roadmap-cadrage-ia.html"><a class="card-link" href="articles/formations-ia-entreprise.html"><a class="card-link" href="articles/automatisation-assistants-ia.html"><a class="card-link" href="articles/gouvernance-conformite-ia.html"><a class="card-link" href="articles/accompagnement-continu-ia.html"><div class="service">
-        <div class="ico">A</div>
-        <div>
-          <h3>Audit IA & diagnostic</h3>
-          <p>Photographier l’existant, identifier les opportunités à fort levier et mettre en évidence les risques ou angles morts.</p>
-          <ul class="bullets">
-            <li>cartographie des usages réels et du shadow IA</li>
-            <li>maturité par équipe ou par fonction</li>
-            <li>priorisation des quick wins</li>
-          </ul>
-        </div></a>
-      </div>
-      <div class="service">
-        <div class="ico">R</div>
-        <div>
-          <h3>Roadmap & cadrage</h3>
-          <p>Transformer l’audit en plan d’action concret, avec arbitrage entre effort, impact, données, sécurité et conduite du changement.</p>
-          <ul class="bullets">
-            <li>matrice d’opportunités</li>
-            <li>jalons de déploiement</li>
-            <li>budget, rôles et priorités</li>
-          </ul>
-        </div></a>
-      </div>
-      <div class="service">
-        <div class="ico">F</div>
-        <div>
-          <h3>Formations IA</h3>
-          <p>Former les dirigeants, managers, équipes métiers ou fonctions support à l’IA générative, aux outils et aux bonnes pratiques.</p>
-          <ul class="bullets">
-            <li>acculturation & sensibilisation</li>
-            <li>ateliers orientés cas d’usage</li>
-            <li>règles de sécurité et d’usage</li>
-          </ul>
-        </div></a>
-      </div>
-      <div class="service">
-        <div class="ico">⚙</div>
-        <div>
-          <h3>Automatisation & assistants IA</h3>
-          <p>Concevoir des solutions simples et utiles : copilots, assistants documentaires, workflows, automatisations et agents métier.</p>
-          <ul class="bullets">
-            <li>connexion aux outils et documents</li>
-            <li>assistant métier personnalisé</li>
-            <li>mise en œuvre progressive</li>
-          </ul>
-        </div></a>
-      </div>
-      <div class="service">
-        <div class="ico">G</div>
-        <div>
-          <h3>Gouvernance & conformité</h3>
-          <p>Mettre un cadre autour des usages : données sensibles, validation humaine, accès, traçabilité et politique interne.</p>
-          <ul class="bullets">
-            <li>bonnes pratiques et garde-fous</li>
-            <li>sensibilisation AI Act / RGPD</li>
-            <li>clarification des responsabilités</li>
-          </ul>
-        </div></a>
-      </div>
-      <div class="service">
-        <div class="ico">↗</div>
-        <div>
-          <h3>Accompagnement continu</h3>
-          <p>Suivre les premiers usages, ajuster les priorités, outiller les équipes et stabiliser les résultats dans la durée.</p>
-          <ul class="bullets">
-            <li>comités de pilotage</li>
-            <li>support au lancement</li>
-            <li>montée en autonomie</li>
-          </ul>
-        </div></a>
-      </div>
-    </div>
+  <a class="card-link" href="articles/audit-diagnostic-ia.html">
+    <div class="service"><div class="ico">A</div><div><h3>Audit IA & diagnostic</h3><p>Photographier l’existant, identifier les opportunités à fort levier et mettre en évidence les risques ou angles morts.</p><ul class="bullets"><li>cartographie des usages réels et du shadow IA</li><li>maturité par équipe ou par fonction</li><li>priorisation des quick wins</li></ul></div></div>
+  </a>
+  <a class="card-link" href="articles/roadmap-cadrage-ia.html">
+    <div class="service"><div class="ico">R</div><div><h3>Roadmap & cadrage</h3><p>Transformer l’audit en plan d’action concret, avec arbitrage entre effort, impact, données, sécurité et conduite du changement.</p><ul class="bullets"><li>matrice d’opportunités</li><li>jalons de déploiement</li><li>budget, rôles et priorités</li></ul></div></div>
+  </a>
+  <a class="card-link" href="articles/formations-ia-entreprise.html">
+    <div class="service"><div class="ico">F</div><div><h3>Formations IA</h3><p>Former les dirigeants, managers, équipes métiers ou fonctions support à l’IA générative, aux outils et aux bonnes pratiques.</p><ul class="bullets"><li>acculturation & sensibilisation</li><li>ateliers orientés cas d’usage</li><li>règles de sécurité et d’usage</li></ul></div></div>
+  </a>
+  <a class="card-link" href="articles/automatisation-assistants-ia.html">
+    <div class="service"><div class="ico">⚙</div><div><h3>Automatisation & assistants IA</h3><p>Concevoir des solutions simples et utiles : copilots, assistants documentaires, workflows, automatisations et agents métier.</p><ul class="bullets"><li>connexion aux outils et documents</li><li>assistant métier personnalisé</li><li>mise en œuvre progressive</li></ul></div></div>
+  </a>
+  <a class="card-link" href="articles/gouvernance-conformite-ia.html">
+    <div class="service"><div class="ico">G</div><div><h3>Gouvernance & conformité</h3><p>Mettre un cadre autour des usages : données sensibles, validation humaine, accès, traçabilité et politique interne.</p><ul class="bullets"><li>bonnes pratiques et garde-fous</li><li>sensibilisation AI Act / RGPD</li><li>clarification des responsabilités</li></ul></div></div>
+  </a>
+  <a class="card-link" href="articles/accompagnement-continu-ia.html">
+    <div class="service"><div class="ico">↗</div><div><h3>Accompagnement continu</h3><p>Suivre les premiers usages, ajuster les priorités, outiller les équipes et stabiliser les résultats dans la durée.</p><ul class="bullets"><li>comités de pilotage</li><li>support au lancement</li><li>montée en autonomie</li></ul></div></div>
+  </a>
+</div>
   </div>
 </section>
 
@@ -1410,7 +1505,7 @@ body{
 
     <div class="intro-grid">
       <div class="tech-editorial">
-        <h3>De l’usage métier à l’architecture</h3>
+        <h3><a href="articles/usage-metier-architecture-ia.html" class="title-link">De l’usage métier à l’architecture</a></h3>
         <p>SR-IT privilégie une démarche progressive : clarifier le besoin, vérifier les données et les accès, choisir le niveau d’automatisation pertinent, puis tester avant déploiement.</p>
         <div class="tech-points">
           <div class="tech-point"><div class="badge">01</div><div><b>Automatisation</b><span>Pour les tâches stables, répétitives et bien définies.</span></div></div>
@@ -1470,6 +1565,17 @@ body{
 </a>
 
 </section>
+<section class="container">
+  <a class="card-link" href="articles/attention-is-all-you-need.html">
+    <div class="service" style="margin-top:18px">
+      <span class="tag">Culture IA</span>
+      <h3>“Attention Is All You Need” : le papier qui a changé l’IA</h3>
+      <p>Comprendre simplement le Transformer, la self-attention et pourquoi cette architecture est devenue centrale dans l’IA générative moderne.</p>
+      <span class="train-read">Lire l’article →</span>
+    </div>
+  </a>
+</section>
+
 
 
 
@@ -1477,7 +1583,7 @@ body{
 <section id="audit">
   <div class="container">
     <div class="audit-band">
-      <h3>Ce que doit produire un audit IA sérieux</h3>
+      <h3><a href="articles/audit-ia-serieux.html" class="title-link">Ce que doit produire un audit IA sérieux</a></h3>
       <p>Chez SR-IT, un audit ne se limite pas à une conversation commerciale. Il doit aboutir à des livrables utiles, réutilisables et directement exploitables pour décider, former et lancer les premiers chantiers.</p>
       <div class="audit-grid">
         <div class="audit-card"><b>Cartographie des usages</b><span>Outils utilisés, pratiques réelles, zones de risque, niveau d’adoption.</span></div>
@@ -1496,10 +1602,10 @@ body{
       <h2>Un déroulé lisible du premier échange à la mise en œuvre</h2>
     </div>
     <div class="timeline">
-      <div class="step"><div class="num">1</div><h3>Comprendre</h3><p>Premier échange, clarification du besoin, périmètre, enjeux, acteurs clés et contraintes.</p></div>
-      <div class="step"><div class="num">2</div><h3>Analyser</h3><p>Audit ciblé, cartographie des usages et processus, analyse des opportunités et des risques.</p></div>
-      <div class="step"><div class="num">3</div><h3>Décider</h3><p>Recommandations, feuille de route, priorisation des chantiers et options d’accompagnement.</p></div>
-      <div class="step"><div class="num">4</div><h3>Déployer</h3><p>Formations, intégration, automatisation, suivi des usages et amélioration continue.</p></div>
+      <div class="step"><div class="num">1</div><h3><a href="articles/methode-comprendre-analyser-decider-deployer.html" class="title-link">Comprendre</a></h3><p>Premier échange, clarification du besoin, périmètre, enjeux, acteurs clés et contraintes.</p></div>
+      <div class="step"><div class="num">2</div><h3><a href="articles/methode-comprendre-analyser-decider-deployer.html" class="title-link">Analyser</a></h3><p>Audit ciblé, cartographie des usages et processus, analyse des opportunités et des risques.</p></div>
+      <div class="step"><div class="num">3</div><h3><a href="articles/methode-comprendre-analyser-decider-deployer.html" class="title-link">Décider</a></h3><p>Recommandations, feuille de route, priorisation des chantiers et options d’accompagnement.</p></div>
+      <div class="step"><div class="num">4</div><h3><a href="articles/methode-comprendre-analyser-decider-deployer.html" class="title-link">Déployer</a></h3><p>Formations, intégration, automatisation, suivi des usages et amélioration continue.</p></div>
     </div>
   </div>
 </section>
@@ -1512,10 +1618,16 @@ body{
       <p>Le format d’intervention s’adapte au contexte client : diagnostic rapide à distance, ateliers sur site avec les équipes, ou accompagnement mixte selon la phase du projet.</p>
     </div>
     <div class="formats">
-      <a class="card-link" href="formations/formats-formations.html"><a class="card-link" href="formations/formats-formations.html"><a class="card-link" href="formations/formats-formations.html"><div class="format"><div class="label">Format 01</div><h3>En visio</h3><ul><li>Démarrage rapide</li><li>Souplesse d’organisation</li><li>Ateliers, audits et coaching à distance</li><li>Particulièrement adapté aux diagnostics et formations ciblées</li></ul></div></a>
-      <div class="format"><div class="label">Format 02</div><h3>Sur site</h3><ul><li>Immersion dans votre environnement</li><li>Observation directe des processus</li><li>Ateliers collectifs avec les équipes</li><li>Très utile pour l’adoption et le cadrage métier</li></ul></div></a>
-      <div class="format"><div class="label">Format 03</div><h3>Mode hybride</h3><ul><li>Diagnostic à distance, ateliers sur place</li><li>Meilleur équilibre coût / proximité</li><li>Suivi fluide dans le temps</li><li>Approche recommandée pour la plupart des missions</li></ul></div></a>
-    </div>
+  <a class="card-link" href="formations/formats-formations.html">
+    <div class="format"><div class="label">Format 01</div><h3>En visio</h3><ul><li>Démarrage rapide</li><li>Souplesse d’organisation</li><li>Ateliers, audits et coaching à distance</li><li>Particulièrement adapté aux diagnostics et formations ciblées</li></ul></div>
+  </a>
+  <a class="card-link" href="formations/formats-formations.html">
+    <div class="format"><div class="label">Format 02</div><h3>Sur site</h3><ul><li>Immersion dans votre environnement</li><li>Observation directe des processus</li><li>Ateliers collectifs avec les équipes</li><li>Très utile pour l’adoption et le cadrage métier</li></ul></div>
+  </a>
+  <a class="card-link" href="formations/formats-formations.html">
+    <div class="format"><div class="label">Format 03</div><h3>Mode hybride</h3><ul><li>Diagnostic à distance, ateliers sur place</li><li>Meilleur équilibre coût / proximité</li><li>Suivi fluide dans le temps</li><li>Approche recommandée pour la plupart des missions</li></ul></div>
+  </a>
+</div>
   </div>
 </section>
 
@@ -1528,11 +1640,11 @@ body{
     </div>
     <div class="training-wrap">
       <div class="training-list">
-        <a class="train train-link" href="formations/dirigeants-decideurs.html"><h3>Dirigeants & décideurs</h3><p>Comprendre les opportunités, cadrer les priorités, piloter la feuille de route et arbitrer les risques.</p><div class="meta">Stratégie • ROI • Gouvernance<span class="train-read">Voir le parcours →</span></a></div>
-        <a class="train train-link" href="formations/managers-equipes-metier.html"><h3>Managers & équipes métier</h3><p>Utiliser l’IA générative au quotidien, produire mieux, gagner du temps et adopter les bons réflexes.</p><div class="meta">Usages • Prompting • Productivité<span class="train-read">Voir le parcours →</span></a></div>
-        <a class="train train-link" href="formations/fonctions-support.html"><h3>Fonctions support</h3><p>Cas d’usage pour RH, finance, administratif, marketing, relation client et gestion documentaire.</p><div class="meta">Workflows • Rédaction • Synthèse<span class="train-read">Voir le parcours →</span></a></div>
-        <a class="train train-link" href="formations/equipes-it-projet.html"><h3>Équipes IT / projet</h3><p>Architecture, choix d’outils, sécurité, assistants internes, automatisation et intégration à l’existant.</p><div class="meta">Intégration • Données • Sécurité<span class="train-read">Voir le parcours →</span></a></div>
-      </div>
+  <a class="train train-link" href="formations/dirigeants-decideurs.html"><h3>Dirigeants & décideurs</h3><p>Comprendre les opportunités, cadrer les priorités, piloter la feuille de route et arbitrer les risques.</p><div class="meta">Stratégie • ROI • Gouvernance</div><span class="train-read">Voir le parcours →</span></a>
+  <a class="train train-link" href="formations/managers-equipes-metier.html"><h3>Managers & équipes métier</h3><p>Utiliser l’IA générative au quotidien, produire mieux, gagner du temps et adopter les bons réflexes.</p><div class="meta">Usages • Prompting • Productivité</div><span class="train-read">Voir le parcours →</span></a>
+  <a class="train train-link" href="formations/fonctions-support.html"><h3>Fonctions support</h3><p>Cas d’usage pour RH, finance, administratif, marketing, relation client et gestion documentaire.</p><div class="meta">Workflows • Rédaction • Synthèse</div><span class="train-read">Voir le parcours →</span></a>
+  <a class="train train-link" href="formations/equipes-it-projet.html"><h3>Équipes IT / projet</h3><p>Architecture, choix d’outils, sécurité, assistants internes, automatisation et intégration à l’existant.</p><div class="meta">Intégration • Données • Sécurité</div><span class="train-read">Voir le parcours →</span></a>
+</div>
       <aside class="training-side">
         <h3>Formats possibles</h3>
         <p>Les formations peuvent être proposées en atelier découverte, demi-journée, journée complète ou parcours sur mesure.</p>
@@ -1548,6 +1660,10 @@ body{
 </section>
 
 
+
+<section class="container" aria-label="Passage à l'action">
+  <div class="turning-point">Le virage de l’IA se prend maintenant.</div>
+</section>
 <section id="diagnostic" class="smart-diagnostic">
   <div class="container">
     <div class="section-head">

@@ -6,6 +6,55 @@ body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#071a36;color:wh
 .card{max-width:680px;margin:24px;background:white;color:#0c1f3d;border-radius:22px;padding:42px;box-shadow:0 24px 60px rgba(0,0,0,.25)}
 h1{margin:0 0 14px;font-size:38px}.accent{color:#2368e8}p{color:#536681;line-height:1.65}
 a{display:inline-block;margin-top:16px;padding:12px 18px;border-radius:12px;background:#2368e8;color:white;text-decoration:none;font-weight:700}
+
+/* ===== V33 — correctifs d'affichage globaux ===== */
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{overflow-x:hidden}
+img,svg,video{max-width:100%;height:auto}
+a{overflow-wrap:anywhere}
+section{scroll-margin-top:88px}
+
+@media (max-width: 900px){
+  .container{
+    width:auto !important;
+    max-width:none !important;
+    margin-left:18px !important;
+    margin-right:18px !important;
+  }
+  .hero .grid,
+  .article-layout,
+  .training-wrap,
+  .smart-shell,
+  .contact-grid,
+  .usecase-grid,
+  .services-grid,
+  .pillars,
+  .formats-grid,
+  .program-grid{
+    grid-template-columns:1fr !important;
+  }
+  h1{font-size:clamp(34px,9vw,54px) !important;line-height:1.02 !important}
+  h2{font-size:clamp(28px,7.5vw,42px) !important;line-height:1.08 !important}
+  h3{line-height:1.2 !important}
+  p,li{overflow-wrap:anywhere}
+  .hero{padding-top:34px !important}
+  .hero .grid{gap:26px !important}
+  .smart-form,.smart-aside,.training-side,.article,.aside-card{min-width:0 !important}
+  input,textarea,select,button{max-width:100% !important}
+}
+
+@media (max-width: 520px){
+  .container{
+    margin-left:16px !important;
+    margin-right:16px !important;
+  }
+  section{padding-left:0 !important;padding-right:0 !important}
+  .card,.service,.pillar,.format,.train,.program,.smart-form,.smart-aside,.article,.aside-card{
+    border-radius:16px !important;
+  }
+}
+
 </style></head>
 <body><div class="card"><h1>Merci, votre demande a bien été envoyée.</h1>
 <p>SR-IT a reçu votre formulaire. Vous serez recontacté prochainement.</p>
