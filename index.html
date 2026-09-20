@@ -1144,6 +1144,17 @@ body{
   }
 }
 
+
+.train-link{display:block;color:inherit;text-decoration:none;transition:transform .2s ease,box-shadow .2s ease}
+.train-link:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(10,23,49,.08)}
+.train-read{display:inline-block;margin-top:10px;color:#245fd8;font-size:13px;font-weight:900}
+.formats-read{display:inline-block;margin-top:16px;color:#fff;font-size:13px;font-weight:900;text-decoration:underline;text-underline-offset:3px}
+
+
+.card-link{display:block;color:inherit;text-decoration:none;min-width:0}
+.card-link .pillar,.card-link .service,.card-link .format{height:100%;transition:transform .2s ease,box-shadow .2s ease}
+.card-link:hover .pillar,.card-link:hover .service,.card-link:hover .format{transform:translateY(-3px);box-shadow:0 18px 38px rgba(10,23,49,.09)}
+
 </style>
 </head>
 <body>
@@ -1161,7 +1172,7 @@ body{
       <a href="#diagnostic" class="btn btn-primary" style="padding:12px 16px">Diagnostic IA</a>
     </nav>
     <div class="mobile-header-actions">
-      <a class="mobile-need-btn" href="#top-contact">Parler de votre besoin</a>
+      <a class="mobile-need-btn" href="#top-contact">Faire le diagnostic IA</a>
       <button class="mobile-menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileNav">
         <span></span>
       </button>
@@ -1269,9 +1280,9 @@ body{
       <p>Audit, formation, cadrage et mise en œuvre : chaque mission part de vos processus, de vos contraintes et des résultats attendus. L’objectif est d’identifier les usages réellement utiles, puis de les déployer avec un niveau de maîtrise adapté à votre organisation.</p>
     </div>
     <div class="pillars">
-      <div class="pillar"><div class="n">Pilier 01</div><h3>Stratégie</h3><p>Clarifier vos objectifs, cartographier les processus, prioriser les cas d’usage et construire une feuille de route réaliste.</p></div>
-      <div class="pillar"><div class="n">Pilier 02</div><h3>Adoption</h3><p>Faire monter les équipes en compétence, sécuriser les pratiques et ancrer des usages utiles dans le quotidien de travail.</p></div>
-      <div class="pillar"><div class="n">Pilier 03</div><h3>Intégration</h3><p>Connecter l’IA aux outils existants, concevoir des assistants métier et transformer les idées en solutions opérationnelles.</p></div>
+      <a class="card-link" href="articles/strategie-ia.html"><a class="card-link" href="articles/adoption-ia.html"><a class="card-link" href="articles/integration-ia.html"><div class="pillar"><div class="n">Pilier 01</div><h3>Stratégie</h3><p>Clarifier vos objectifs, cartographier les processus, prioriser les cas d’usage et construire une feuille de route réaliste.</p></div></a>
+      <div class="pillar"><div class="n">Pilier 02</div><h3>Adoption</h3><p>Faire monter les équipes en compétence, sécuriser les pratiques et ancrer des usages utiles dans le quotidien de travail.</p></div></a>
+      <div class="pillar"><div class="n">Pilier 03</div><h3>Intégration</h3><p>Connecter l’IA aux outils existants, concevoir des assistants métier et transformer les idées en solutions opérationnelles.</p></div></a>
     </div>
   </div>
 </section>
@@ -1284,7 +1295,7 @@ body{
       <p>Une palette de prestations couvrant la transformation IA de bout en bout, avec un langage simple pour les décideurs et une logique claire pour les équipes opérationnelles.</p>
     </div>
     <div class="service-grid">
-      <div class="service">
+      <a class="card-link" href="articles/audit-diagnostic-ia.html"><a class="card-link" href="articles/roadmap-cadrage-ia.html"><a class="card-link" href="articles/formations-ia-entreprise.html"><a class="card-link" href="articles/automatisation-assistants-ia.html"><a class="card-link" href="articles/gouvernance-conformite-ia.html"><a class="card-link" href="articles/accompagnement-continu-ia.html"><div class="service">
         <div class="ico">A</div>
         <div>
           <h3>Audit IA & diagnostic</h3>
@@ -1294,7 +1305,7 @@ body{
             <li>maturité par équipe ou par fonction</li>
             <li>priorisation des quick wins</li>
           </ul>
-        </div>
+        </div></a>
       </div>
       <div class="service">
         <div class="ico">R</div>
@@ -1306,7 +1317,7 @@ body{
             <li>jalons de déploiement</li>
             <li>budget, rôles et priorités</li>
           </ul>
-        </div>
+        </div></a>
       </div>
       <div class="service">
         <div class="ico">F</div>
@@ -1318,7 +1329,7 @@ body{
             <li>ateliers orientés cas d’usage</li>
             <li>règles de sécurité et d’usage</li>
           </ul>
-        </div>
+        </div></a>
       </div>
       <div class="service">
         <div class="ico">⚙</div>
@@ -1330,7 +1341,7 @@ body{
             <li>assistant métier personnalisé</li>
             <li>mise en œuvre progressive</li>
           </ul>
-        </div>
+        </div></a>
       </div>
       <div class="service">
         <div class="ico">G</div>
@@ -1342,7 +1353,7 @@ body{
             <li>sensibilisation AI Act / RGPD</li>
             <li>clarification des responsabilités</li>
           </ul>
-        </div>
+        </div></a>
       </div>
       <div class="service">
         <div class="ico">↗</div>
@@ -1354,7 +1365,7 @@ body{
             <li>support au lancement</li>
             <li>montée en autonomie</li>
           </ul>
-        </div>
+        </div></a>
       </div>
     </div>
   </div>
@@ -1501,9 +1512,9 @@ body{
       <p>Le format d’intervention s’adapte au contexte client : diagnostic rapide à distance, ateliers sur site avec les équipes, ou accompagnement mixte selon la phase du projet.</p>
     </div>
     <div class="formats">
-      <div class="format"><div class="label">Format 01</div><h3>En visio</h3><ul><li>Démarrage rapide</li><li>Souplesse d’organisation</li><li>Ateliers, audits et coaching à distance</li><li>Particulièrement adapté aux diagnostics et formations ciblées</li></ul></div>
-      <div class="format"><div class="label">Format 02</div><h3>Sur site</h3><ul><li>Immersion dans votre environnement</li><li>Observation directe des processus</li><li>Ateliers collectifs avec les équipes</li><li>Très utile pour l’adoption et le cadrage métier</li></ul></div>
-      <div class="format"><div class="label">Format 03</div><h3>Mode hybride</h3><ul><li>Diagnostic à distance, ateliers sur place</li><li>Meilleur équilibre coût / proximité</li><li>Suivi fluide dans le temps</li><li>Approche recommandée pour la plupart des missions</li></ul></div>
+      <a class="card-link" href="formations/formats-formations.html"><a class="card-link" href="formations/formats-formations.html"><a class="card-link" href="formations/formats-formations.html"><div class="format"><div class="label">Format 01</div><h3>En visio</h3><ul><li>Démarrage rapide</li><li>Souplesse d’organisation</li><li>Ateliers, audits et coaching à distance</li><li>Particulièrement adapté aux diagnostics et formations ciblées</li></ul></div></a>
+      <div class="format"><div class="label">Format 02</div><h3>Sur site</h3><ul><li>Immersion dans votre environnement</li><li>Observation directe des processus</li><li>Ateliers collectifs avec les équipes</li><li>Très utile pour l’adoption et le cadrage métier</li></ul></div></a>
+      <div class="format"><div class="label">Format 03</div><h3>Mode hybride</h3><ul><li>Diagnostic à distance, ateliers sur place</li><li>Meilleur équilibre coût / proximité</li><li>Suivi fluide dans le temps</li><li>Approche recommandée pour la plupart des missions</li></ul></div></a>
     </div>
   </div>
 </section>
@@ -1517,10 +1528,10 @@ body{
     </div>
     <div class="training-wrap">
       <div class="training-list">
-        <div class="train"><h3>Dirigeants & décideurs</h3><p>Comprendre les opportunités, cadrer les priorités, piloter la feuille de route et arbitrer les risques.</p><div class="meta">Stratégie • ROI • Gouvernance</div></div>
-        <div class="train"><h3>Managers & équipes métier</h3><p>Utiliser l’IA générative au quotidien, produire mieux, gagner du temps et adopter les bons réflexes.</p><div class="meta">Usages • Prompting • Productivité</div></div>
-        <div class="train"><h3>Fonctions support</h3><p>Cas d’usage pour RH, finance, administratif, marketing, relation client et gestion documentaire.</p><div class="meta">Workflows • Rédaction • Synthèse</div></div>
-        <div class="train"><h3>Équipes IT / projet</h3><p>Architecture, choix d’outils, sécurité, assistants internes, automatisation et intégration à l’existant.</p><div class="meta">Intégration • Données • Sécurité</div></div>
+        <a class="train train-link" href="formations/dirigeants-decideurs.html"><h3>Dirigeants & décideurs</h3><p>Comprendre les opportunités, cadrer les priorités, piloter la feuille de route et arbitrer les risques.</p><div class="meta">Stratégie • ROI • Gouvernance<span class="train-read">Voir le parcours →</span></a></div>
+        <a class="train train-link" href="formations/managers-equipes-metier.html"><h3>Managers & équipes métier</h3><p>Utiliser l’IA générative au quotidien, produire mieux, gagner du temps et adopter les bons réflexes.</p><div class="meta">Usages • Prompting • Productivité<span class="train-read">Voir le parcours →</span></a></div>
+        <a class="train train-link" href="formations/fonctions-support.html"><h3>Fonctions support</h3><p>Cas d’usage pour RH, finance, administratif, marketing, relation client et gestion documentaire.</p><div class="meta">Workflows • Rédaction • Synthèse<span class="train-read">Voir le parcours →</span></a></div>
+        <a class="train train-link" href="formations/equipes-it-projet.html"><h3>Équipes IT / projet</h3><p>Architecture, choix d’outils, sécurité, assistants internes, automatisation et intégration à l’existant.</p><div class="meta">Intégration • Données • Sécurité<span class="train-read">Voir le parcours →</span></a></div>
       </div>
       <aside class="training-side">
         <h3>Formats possibles</h3>
@@ -1530,7 +1541,7 @@ body{
           <li>sessions par public ou par métier</li>
           <li>contenus personnalisés selon votre niveau de maturité</li>
           <li>possibilité d’intégrer vos propres cas pratiques</li>
-        </ul>
+        </ul><a class="formats-read" href="formations/formats-formations.html">Voir les formats en détail →</a>
       </aside>
     </div>
   </div>
