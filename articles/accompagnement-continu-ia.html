@@ -248,14 +248,54 @@ section{scroll-margin-top:88px}
 }
 
 
-/* V47 — illustration homogène grand format */
-.hero .container{width:min(1580px,calc(100% - 24px)) !important}
-.hero .grid{grid-template-columns:minmax(0,.58fr) minmax(840px,1.42fr) !important;gap:24px !important;align-items:center !important}
-.hero .grid>div:first-child{max-width:540px !important}
-.hero-visual.article-illustration{width:100% !important;max-width:none !important;padding:0 !important;margin:0 !important;background:#fff !important;border:1px solid rgba(215,226,240,.95) !important;border-radius:24px !important;overflow:hidden !important;box-shadow:0 24px 58px rgba(8,28,58,.18) !important}
-.hero-visual.article-illustration img{display:block !important;width:100% !important;height:auto !important;max-width:none !important;max-height:none !important;object-fit:contain !important;background:#fff !important}
-@media(max-width:1200px){.hero .grid{grid-template-columns:minmax(0,.78fr) minmax(620px,1.20fr) !important}}
-@media(max-width:900px){.hero .grid{grid-template-columns:1fr !important}.hero .grid>div:first-child{max-width:none !important}.hero-visual.article-illustration{max-width:980px !important;margin:0 auto !important}}
+/* V48 — vraie illustration grand format */
+.hero .container{
+  width:min(1580px,calc(100% - 24px)) !important;
+}
+.hero .grid{
+  grid-template-columns:minmax(0,.58fr) minmax(840px,1.42fr) !important;
+  gap:24px !important;
+  align-items:center !important;
+}
+.hero .grid > div:first-child{
+  max-width:540px !important;
+}
+.hero-visual.image-only{
+  width:100% !important;
+  max-width:none !important;
+  padding:0 !important;
+  margin:0 !important;
+  border-radius:24px !important;
+  overflow:hidden !important;
+  background:#fff !important;
+  border:1px solid rgba(215,226,240,.95) !important;
+  box-shadow:0 24px 58px rgba(8,28,58,.18) !important;
+}
+.hero-visual.image-only img{
+  display:block !important;
+  width:100% !important;
+  height:auto !important;
+  max-width:none !important;
+  object-fit:cover !important;
+  border-radius:0 !important;
+}
+@media(max-width:1200px){
+  .hero .grid{
+    grid-template-columns:minmax(0,.78fr) minmax(620px,1.20fr) !important;
+  }
+}
+@media(max-width:900px){
+  .hero .grid{
+    grid-template-columns:1fr !important;
+  }
+  .hero .grid > div:first-child{
+    max-width:none !important;
+  }
+  .hero-visual.image-only{
+    max-width:980px !important;
+    margin:0 auto !important;
+  }
+}
 
 </style>
 </head>
@@ -281,7 +321,9 @@ section{scroll-margin-top:88px}
       <p>Suivre les performances, les coûts, l’adoption et les évolutions pour maintenir la qualité et la valeur après le déploiement.</p>
       <div class="meta"><span>Monitoring</span><span>TMA</span><span>Évolution</span></div>
     </div>
-    <div class="hero-visual article-illustration"><img src="../assets/illustration-accompagnement-continu-ia.svg" alt="Illustration accompagnement continu ia"></div></div></section>
+    <div class="hero-visual image-only"><img src="../assets/illustration-accompagnement-continu-ia.png" alt="Illustration accompagnement continu ia"></div>
+  </div>
+</section>
 
 <main class="main">
 <div class="container article-layout">
