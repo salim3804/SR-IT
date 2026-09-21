@@ -271,6 +271,93 @@ section{scroll-margin-top:88px}
 @media(max-width:900px){.agents-concrete-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:620px){.agents-showcase{padding:38px 0}.agents-concrete-grid{grid-template-columns:1fr}.agents-showcase-visual{padding:6px;border-radius:18px}}
 
+
+/* ===== V59 — agents métier illustrés directement dans les cartes ===== */
+.agents-showcase-v59{
+  padding:58px 0 60px;
+  background:linear-gradient(180deg,#f5f9ff 0%,#ffffff 100%);
+}
+.agents-showcase-v59 .agents-showcase-head{
+  max-width:920px;
+  margin-bottom:30px;
+}
+.agents-showcase-v59 .agents-showcase-head h1{
+  margin:10px 0 14px;
+  color:#0b2a58;
+  font-size:clamp(36px,4vw,56px);
+  line-height:1.04;
+  letter-spacing:-.03em;
+}
+.agents-showcase-v59 .agents-showcase-head p{
+  max-width:900px;
+  color:#405777;
+  font-size:18px;
+  line-height:1.65;
+}
+.agents-visual-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:20px;
+}
+.agent-visual-card{
+  margin:0;
+  overflow:hidden;
+  border:1px solid #d8e5f5;
+  border-radius:22px;
+  background:#fff;
+  box-shadow:0 12px 34px rgba(16,51,99,.08);
+  transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;
+}
+.agent-visual-card:hover{
+  transform:translateY(-4px);
+  border-color:#b8d2f7;
+  box-shadow:0 20px 46px rgba(16,51,99,.14);
+}
+.agent-visual-card img{
+  display:block;
+  width:100%;
+  height:auto;
+  aspect-ratio:4/3;
+  object-fit:cover;
+  background:#f4f8ff;
+}
+.agent-card-footer{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding:14px 16px 16px;
+  border-top:1px solid #edf2f8;
+}
+.agent-card-footer strong{
+  color:#0f2d59;
+  font-size:15px;
+}
+.agent-card-footer a{
+  color:#1768e5;
+  font-size:13px;
+  font-weight:800;
+  text-decoration:none;
+  white-space:nowrap;
+}
+.agent-card-footer a:hover{text-decoration:underline}
+.agents-human-note{
+  margin-top:28px;
+  padding:18px 20px;
+  border-radius:16px;
+  background:#0e315f;
+  color:#fff;
+  line-height:1.55;
+}
+@media(max-width:1050px){
+  .agents-visual-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:680px){
+  .agents-showcase-v59{padding:40px 0}
+  .agents-visual-grid{grid-template-columns:1fr}
+  .agent-card-footer{align-items:flex-start;flex-direction:column}
+}
+
 </style>
 
     <style>
@@ -306,43 +393,51 @@ section{scroll-margin-top:88px}
   </div>
 </header>
 
-    
-    
-
-<section class="hero">
-  <div class="container grid">
-    <div>
-      <span class="kicker">Automatisation</span>
-      <h1>Automatisation &amp; assistants IA</h1>
-      <p>Choisir entre workflow, assistant et agent pour automatiser efficacement tout en conservant les validations nécessaires.</p>
-      <div class="meta"><span>n8n</span><span>RAG</span><span>Agents</span></div>
-    </div>
-    <div class="hero-visual visual-generic"><div class="visual-stack"><div class="row"><div class="num">01</div><div><b>Workflow</b><span>Fiable</span></div></div><div class="row"><div class="num">02</div><div><b>Assistant</b><span>Interactif</span></div></div><div class="row"><div class="num">03</div><div><b>Agent</b><span>Outillé</span></div></div></div></div>
-  </div>
-</section>
-
-<section class="agents-showcase">
+<section class="agents-showcase agents-showcase-v59">
   <div class="container">
     <div class="agents-showcase-head">
       <span class="kicker">Des agents IA concrets, par métier</span>
-      <h2>À quoi peut réellement servir un agent IA dans votre entreprise ?</h2>
-      <p>Un agent IA ne se limite pas à “discuter”. Il peut rechercher dans vos documents, préparer une action, mettre à jour un outil, qualifier une demande ou orchestrer un workflow — avec des règles, des validations et une reprise humaine lorsque nécessaire.</p>
+      <h1>À quoi peut réellement servir un agent IA dans votre entreprise ?</h1>
+      <p>Un agent IA peut rechercher dans vos documents, préparer une action, mettre à jour vos outils, qualifier une demande ou faire avancer un workflow — avec des règles, des validations et une reprise humaine lorsque nécessaire.</p>
     </div>
 
-    <div class="agents-showcase-visual">
-      <img src="../assets/agents-ia-metiers.png" alt="Exemples d’agents IA métier : marketing, commercial, service client, téléphonique, RH, finance, achats, juridique et opérations">
-    </div>
-
-    <div class="agents-concrete-grid">
-      <article><span>01</span><h3>Agent IA commercial</h3><p>Qualifie les leads, synthétise les rendez-vous, prépare les relances et facilite la mise à jour du CRM.</p></article>
-      <article><span>02</span><h3>Agent IA service client</h3><p>Classe les tickets, recherche la bonne procédure, prépare une réponse et transfère les cas sensibles à un humain.</p></article>
-      <article><span>03</span><h3>Agent IA téléphonique</h3><p>Accueille l’appel, identifie le besoin, collecte les informations utiles et peut proposer un rendez-vous ou un transfert.</p></article>
-      <article><span>04</span><h3>Agent IA RH</h3><p>Répond aux questions internes autorisées, accompagne l’onboarding et aide à préparer certains dossiers RH.</p></article>
-      <article><span>05</span><h3>Agent IA finance</h3><p>Prépare le traitement de factures, rapproche des informations, détecte des anomalies et alimente le reporting.</p></article>
-      <article><span>06</span><h3>Agent IA achats</h3><p>Structure le sourcing, compare les devis, suit les contrats et prépare les relances fournisseurs.</p></article>
-      <article><span>07</span><h3>Agent IA juridique</h3><p>Recherche dans les documents autorisés, extrait des clauses et prépare une synthèse pour validation humaine.</p></article>
-      <article><span>08</span><h3>Agent IA marketing</h3><p>Prépare des idées de contenus, segmente les besoins et assiste la production de campagnes multicanales.</p></article>
-      <article><span>09</span><h3>Agent IA opérations</h3><p>Traite emails et documents, déclenche des tâches et fait avancer un workflow entre plusieurs outils.</p></article>
+    <div class="agents-visual-grid">
+      <article class="agent-visual-card">
+        <img src="../assets/agent-marketing.jpg" alt="Agent IA marketing : idées de contenus, segmentation et campagnes multicanales">
+        <div class="agent-card-footer"><strong>Marketing</strong><a href="../index.html#diagnostic">Étudier ce cas d’usage →</a></div>
+      </article>
+      <article class="agent-visual-card">
+        <img src="../assets/agent-commercial.jpg" alt="Agent IA commercial : qualification de leads, suivi CRM et synthèse de rendez-vous">
+        <div class="agent-card-footer"><strong>Commercial</strong><a href="../index.html#diagnostic">Étudier ce cas d’usage →</a></div>
+      </article>
+      <article class="agent-visual-card">
+        <img src="../assets/agent-service-client.jpg" alt="Agent IA service client : traitement des tickets, réponses assistées et escalade intelligente">
+        <div class="agent-card-footer"><strong>Service client</strong><a href="../index.html#diagnostic">Étudier ce cas d’usage →</a></div>
+      </article>
+      <article class="agent-visual-card">
+        <img src="../assets/agent-telephonique.jpg" alt="Agent IA téléphonique : qualification des appels, prise de rendez-vous et transfert">
+        <div class="agent-card-footer"><strong>Téléphonique</strong><a href="../index.html#diagnostic">Étudier ce cas d’usage →</a></div>
+      </article>
+      <article class="agent-visual-card">
+        <img src="../assets/agent-rh.jpg" alt="Agent IA RH : onboarding, support collaborateurs et aide au recrutement">
+        <div class="agent-card-footer"><strong>Ressources humaines</strong><a href="../index.html#diagnostic">Étudier ce cas d’usage →</a></div>
+      </article>
+      <article class="agent-visual-card">
+        <img src="../assets/agent-finance.jpg" alt="Agent IA finance : traitement des factures, rapprochement comptable et alertes">
+        <div class="agent-card-footer"><strong>Finance</strong><a href="../index.html#diagnostic">Étudier ce cas d’usage →</a></div>
+      </article>
+      <article class="agent-visual-card">
+        <img src="../assets/agent-achats.jpg" alt="Agent IA achats : sourcing fournisseurs, comparaison de devis et suivi des contrats">
+        <div class="agent-card-footer"><strong>Achats</strong><a href="../index.html#diagnostic">Étudier ce cas d’usage →</a></div>
+      </article>
+      <article class="agent-visual-card">
+        <img src="../assets/agent-juridique.jpg" alt="Agent IA juridique : analyse documentaire, extraction de clauses et conformité">
+        <div class="agent-card-footer"><strong>Juridique</strong><a href="../index.html#diagnostic">Étudier ce cas d’usage →</a></div>
+      </article>
+      <article class="agent-visual-card">
+        <img src="../assets/agent-operations.jpg" alt="Agent IA opérations : traitement d'emails, documents et orchestration de tâches">
+        <div class="agent-card-footer"><strong>Opérations</strong><a href="../index.html#diagnostic">Étudier ce cas d’usage →</a></div>
+      </article>
     </div>
 
     <div class="agents-human-note">
@@ -350,6 +445,7 @@ section{scroll-margin-top:88px}
     </div>
   </div>
 </section>
+
 
 <main class="main">
 <div class="container article-layout">
