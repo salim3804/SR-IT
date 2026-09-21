@@ -254,6 +254,23 @@ section{scroll-margin-top:88px}
   .nav a{white-space:nowrap}
 }
 
+
+/* V57 — agents IA concrets */
+.agents-showcase{padding:54px 0;background:#f6f9fe;border-top:1px solid #dce7f5;border-bottom:1px solid #dce7f5}
+.agents-showcase-head{max-width:940px;margin-bottom:26px}
+.agents-showcase-head h2{font-size:clamp(30px,3vw,46px);line-height:1.08;margin:12px 0 14px;color:#0e2a52}
+.agents-showcase-head p{font-size:18px;line-height:1.7;color:#4b6382}
+.agents-showcase-visual{background:#fff;border:1px solid #d9e5f4;border-radius:24px;padding:10px;box-shadow:0 18px 46px rgba(15,43,82,.10);overflow:hidden}
+.agents-showcase-visual img{width:100%;height:auto;display:block;border-radius:18px}
+.agents-concrete-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
+.agents-concrete-grid article{background:#fff;border:1px solid #d9e5f4;border-radius:18px;padding:20px;min-height:170px}
+.agents-concrete-grid span{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:#eaf2ff;color:#2165d6;font-weight:800;margin-bottom:12px}
+.agents-concrete-grid h3{margin:0 0 8px;font-size:19px;color:#0e2a52}
+.agents-concrete-grid p{margin:0;color:#536a89;line-height:1.55}
+.agents-human-note{margin-top:24px;background:#0f356f;color:#fff;border-radius:18px;padding:20px 22px;line-height:1.55}
+@media(max-width:900px){.agents-concrete-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.agents-showcase{padding:38px 0}.agents-concrete-grid{grid-template-columns:1fr}.agents-showcase-visual{padding:6px;border-radius:18px}}
+
 </style>
 
     <style>
@@ -289,53 +306,7 @@ section{scroll-margin-top:88px}
   </div>
 </header>
 
-    <section class="page-hero-visual" aria-label="Illustration automatisation & assistants IA">
-      <svg viewBox="0 0 1400 520" width="100%" role="img" aria-label="Illustration automatisation & assistants IA" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="bg" x1="0" x2="1">
-            <stop offset="0%" stop-color="#f7fbff"/>
-            <stop offset="100%" stop-color="#eef5ff"/>
-          </linearGradient>
-          <linearGradient id="panel" x1="0" x2="1">
-            <stop offset="0%" stop-color="#ffffff"/>
-            <stop offset="100%" stop-color="#f5f9ff"/>
-          </linearGradient>
-        </defs>
-        <rect width="1400" height="520" fill="url(#bg)"/>
-        <text x="48" y="82" font-size="52" font-family="Arial, Helvetica, sans-serif" font-weight="700" fill="#2e6cff">03.</text>
-        <text x="170" y="82" font-size="44" font-family="Arial, Helvetica, sans-serif" font-weight="700" fill="#122b5c">Automatisation & assistants IA</text>
-        <text x="48" y="126" font-size="24" font-family="Arial, Helvetica, sans-serif" fill="#46608f">Choisir entre workflow, assistant et agent.</text>
-        <g>
-          <rect x="46" y="178" rx="18" ry="18" width="250" height="112" fill="url(#panel)" stroke="#c8d8ef"/>
-          <text x="70" y="225" font-size="30" font-family="Arial, Helvetica, sans-serif" font-weight="700" fill="#2e6cff">01</text>
-          <text x="70" y="262" font-size="22" font-family="Arial, Helvetica, sans-serif" fill="#163567">Fiable</text>
-          <rect x="320" y="178" rx="18" ry="18" width="250" height="112" fill="url(#panel)" stroke="#c8d8ef"/>
-          <text x="344" y="225" font-size="30" font-family="Arial, Helvetica, sans-serif" font-weight="700" fill="#2e6cff">02</text>
-          <text x="344" y="262" font-size="22" font-family="Arial, Helvetica, sans-serif" fill="#163567">Interactif</text>
-          <rect x="594" y="178" rx="18" ry="18" width="250" height="112" fill="url(#panel)" stroke="#c8d8ef"/>
-          <text x="618" y="225" font-size="30" font-family="Arial, Helvetica, sans-serif" font-weight="700" fill="#2e6cff">03</text>
-          <text x="618" y="262" font-size="22" font-family="Arial, Helvetica, sans-serif" fill="#163567">Outillé</text>
-        </g>
-        <g>
-          <rect x="880" y="64" rx="28" ry="28" width="468" height="392" fill="url(#panel)" stroke="#d2e0f2"/>
-          <circle cx="1035" cy="230" r="92" fill="#2e6cff" opacity="0.12"/>
-          <circle cx="1035" cy="230" r="74" fill="#2e6cff" opacity="0.18"/>
-          <circle cx="1035" cy="230" r="56" fill="#2e6cff" opacity="0.24"/>
-          <text x="982" y="245" font-size="64" font-family="Arial, Helvetica, sans-serif" font-weight="700" fill="#2e6cff">⚙</text>
-          <rect x="1148" y="136" rx="14" width="150" height="46" fill="#ffffff" stroke="#c8d8ef"/>
-          <text x="1170" y="165" font-size="20" font-family="Arial, Helvetica, sans-serif" fill="#173567">Vision claire</text>
-          <rect x="1148" y="196" rx="14" width="150" height="46" fill="#ffffff" stroke="#c8d8ef"/>
-          <text x="1170" y="225" font-size="20" font-family="Arial, Helvetica, sans-serif" fill="#173567">Cas d’usage</text>
-          <rect x="1148" y="256" rx="14" width="150" height="46" fill="#ffffff" stroke="#c8d8ef"/>
-          <text x="1170" y="285" font-size="20" font-family="Arial, Helvetica, sans-serif" fill="#173567">Feuille de route</text>
-          <rect x="1148" y="316" rx="14" width="150" height="46" fill="#ffffff" stroke="#c8d8ef"/>
-          <text x="1170" y="345" font-size="20" font-family="Arial, Helvetica, sans-serif" fill="#173567">Résultats</text>
-        </g>
-        <g opacity="0.7">
-          <text x="48" y="430" font-size="20" font-family="Arial, Helvetica, sans-serif" fill="#2e6cff">• SR-IT • illustration pédagogique</text>
-        </g>
-      </svg>
-    </section>
+    
     
 
 <section class="hero">
@@ -347,6 +318,36 @@ section{scroll-margin-top:88px}
       <div class="meta"><span>n8n</span><span>RAG</span><span>Agents</span></div>
     </div>
     <div class="hero-visual visual-generic"><div class="visual-stack"><div class="row"><div class="num">01</div><div><b>Workflow</b><span>Fiable</span></div></div><div class="row"><div class="num">02</div><div><b>Assistant</b><span>Interactif</span></div></div><div class="row"><div class="num">03</div><div><b>Agent</b><span>Outillé</span></div></div></div></div>
+  </div>
+</section>
+
+<section class="agents-showcase">
+  <div class="container">
+    <div class="agents-showcase-head">
+      <span class="kicker">Des agents IA concrets, par métier</span>
+      <h2>À quoi peut réellement servir un agent IA dans votre entreprise ?</h2>
+      <p>Un agent IA ne se limite pas à “discuter”. Il peut rechercher dans vos documents, préparer une action, mettre à jour un outil, qualifier une demande ou orchestrer un workflow — avec des règles, des validations et une reprise humaine lorsque nécessaire.</p>
+    </div>
+
+    <div class="agents-showcase-visual">
+      <img src="../assets/agents-ia-metiers.png" alt="Exemples d’agents IA métier : marketing, commercial, service client, téléphonique, RH, finance, achats, juridique et opérations">
+    </div>
+
+    <div class="agents-concrete-grid">
+      <article><span>01</span><h3>Agent IA commercial</h3><p>Qualifie les leads, synthétise les rendez-vous, prépare les relances et facilite la mise à jour du CRM.</p></article>
+      <article><span>02</span><h3>Agent IA service client</h3><p>Classe les tickets, recherche la bonne procédure, prépare une réponse et transfère les cas sensibles à un humain.</p></article>
+      <article><span>03</span><h3>Agent IA téléphonique</h3><p>Accueille l’appel, identifie le besoin, collecte les informations utiles et peut proposer un rendez-vous ou un transfert.</p></article>
+      <article><span>04</span><h3>Agent IA RH</h3><p>Répond aux questions internes autorisées, accompagne l’onboarding et aide à préparer certains dossiers RH.</p></article>
+      <article><span>05</span><h3>Agent IA finance</h3><p>Prépare le traitement de factures, rapproche des informations, détecte des anomalies et alimente le reporting.</p></article>
+      <article><span>06</span><h3>Agent IA achats</h3><p>Structure le sourcing, compare les devis, suit les contrats et prépare les relances fournisseurs.</p></article>
+      <article><span>07</span><h3>Agent IA juridique</h3><p>Recherche dans les documents autorisés, extrait des clauses et prépare une synthèse pour validation humaine.</p></article>
+      <article><span>08</span><h3>Agent IA marketing</h3><p>Prépare des idées de contenus, segmente les besoins et assiste la production de campagnes multicanales.</p></article>
+      <article><span>09</span><h3>Agent IA opérations</h3><p>Traite emails et documents, déclenche des tâches et fait avancer un workflow entre plusieurs outils.</p></article>
+    </div>
+
+    <div class="agents-human-note">
+      <strong>Le principe SR-IT :</strong> automatiser ce qui peut l’être, conserver les validations humaines là où elles sont nécessaires et intégrer l’agent aux outils réellement utilisés par vos équipes.
+    </div>
   </div>
 </section>
 
