@@ -1434,6 +1434,114 @@ section[aria-label="Manifeste SR-IT"] + .attention-section{
 .home-agents-image:hover img{transform:scale(1.012)}
 @media(max-width:960px){.home-agents>.container{grid-template-columns:1fr}.home-agents-image{order:2}}
 
+
+/* ===== V62 — conversion commerciale ===== */
+.hero-proofline{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:12px;
+}
+.hero-proofline span{
+  display:inline-flex;
+  align-items:center;
+  padding:7px 10px;
+  border-radius:999px;
+  background:rgba(255,255,255,.10);
+  border:1px solid rgba(255,255,255,.18);
+  color:#fff;
+  font-size:12px;
+  font-weight:700;
+}
+.conversion-cases{
+  padding:72px 0;
+  background:#fff;
+}
+.conversion-head{
+  max-width:900px;
+}
+.conversion-case-grid{
+  display:grid;
+  gap:18px;
+  margin-top:28px;
+}
+.conversion-case{
+  padding:24px;
+  border:1px solid #dbe6f4;
+  border-radius:20px;
+  background:#f9fbfe;
+}
+.case-top{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:18px;
+}
+.case-top h3{
+  margin:0;
+  color:#0d2d5d;
+  font-size:22px;
+}
+.case-number{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:38px;
+  height:38px;
+  border-radius:12px;
+  background:#eaf2ff;
+  color:#1667e8;
+  font-weight:800;
+}
+.case-flow{
+  display:grid;
+  grid-template-columns:1fr auto 1.15fr auto 1fr;
+  gap:14px;
+  align-items:stretch;
+}
+.case-flow > div:not(.case-arrow){
+  padding:16px;
+  border-radius:14px;
+  background:#fff;
+  border:1px solid #e3ebf6;
+}
+.case-flow b{
+  display:block;
+  margin-bottom:7px;
+  color:#0f315f;
+}
+.case-flow span{
+  color:#51657f;
+  line-height:1.55;
+  font-size:14px;
+}
+.case-arrow{
+  align-self:center;
+  color:#3e7fe4;
+  font-size:24px;
+  font-weight:800;
+}
+.conversion-case-cta{
+  margin-top:24px;
+}
+.audit-deliverable-note{
+  margin-top:18px;
+  padding:14px 16px;
+  border-radius:14px;
+  background:rgba(255,255,255,.09);
+  border:1px solid rgba(255,255,255,.15);
+  line-height:1.55;
+}
+@media(max-width:900px){
+  .case-flow{
+    grid-template-columns:1fr;
+  }
+  .case-arrow{
+    transform:rotate(90deg);
+    justify-self:center;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -1476,8 +1584,13 @@ section[aria-label="Manifeste SR-IT"] + .attention-section{
       <h1>Et si l’IA pouvait vous faire gagner <span>jusqu’à 2 heures par jour</span> ?</h1>
       <p class="lead">Automatisez ce qui peut l’être. Accélérez ce qui compte.<br><br>SR-IT vous aide à identifier les tâches chronophages, prioriser les bons cas d’usage et déployer des solutions IA concrètes pour votre entreprise.</p>
       <div class="hero-actions">
-        <a href="#diagnostic" class="btn btn-primary">Faire le diagnostic IA</a>
+        <a href="#diagnostic" class="btn btn-primary">Identifier mes opportunités IA</a>
         <a href="#offre" class="btn btn-secondary">Découvrir l’offre</a>
+      </div>
+      <div class="hero-proofline">
+        <span>≈ 5 minutes</span>
+        <span>Gratuit</span>
+        <span>Première priorisation de vos cas d’usage</span>
       </div>
     </div>
     
@@ -1741,6 +1854,57 @@ section[aria-label="Manifeste SR-IT"] + .attention-section{
   </div>
 </section>
 
+<section class="conversion-cases" id="cas-concrets">
+  <div class="container">
+    <div class="section-head conversion-head">
+      <span class="tag">Cas concrets</span>
+      <h2>Du problème quotidien à un processus réellement amélioré</h2>
+      <p>Quelques scénarios typiques pour comprendre ce qui change concrètement. Les solutions sont adaptées à vos outils, vos données et vos règles de validation.</p>
+    </div>
+
+    <div class="conversion-case-grid">
+      <article class="conversion-case">
+        <div class="case-top"><span class="case-number">01</span><h3>Boîte mail saturée</h3></div>
+        <div class="case-flow">
+          <div><b>Avant</b><span>Tri manuel, demandes répétitives, réponses dispersées.</span></div>
+          <div class="case-arrow">→</div>
+          <div><b>Solution</b><span>Classification, recherche documentaire, brouillon de réponse et validation humaine.</span></div>
+          <div class="case-arrow">→</div>
+          <div><b>Après</b><span>Moins de traitement manuel, réponses mieux préparées et suivi plus clair.</span></div>
+        </div>
+      </article>
+
+      <article class="conversion-case">
+        <div class="case-top"><span class="case-number">02</span><h3>Relances commerciales irrégulières</h3></div>
+        <div class="case-flow">
+          <div><b>Avant</b><span>Notes de rendez-vous éparses, relances oubliées, CRM incomplet.</span></div>
+          <div class="case-arrow">→</div>
+          <div><b>Solution</b><span>Synthèse du rendez-vous, prochaines actions proposées et mise à jour préparée.</span></div>
+          <div class="case-arrow">→</div>
+          <div><b>Après</b><span>Suivi plus régulier, meilleure visibilité et moins d’informations perdues.</span></div>
+        </div>
+      </article>
+
+      <article class="conversion-case">
+        <div class="case-top"><span class="case-number">03</span><h3>Documents difficiles à exploiter</h3></div>
+        <div class="case-flow">
+          <div><b>Avant</b><span>Procédures, contrats et connaissances répartis dans plusieurs espaces.</span></div>
+          <div class="case-arrow">→</div>
+          <div><b>Solution</b><span>Assistant documentaire / RAG avec sources autorisées, citations et droits d’accès.</span></div>
+          <div class="case-arrow">→</div>
+          <div><b>Après</b><span>Recherche plus rapide, réponses sourcées et reprise humaine lorsque nécessaire.</span></div>
+        </div>
+      </article>
+    </div>
+
+    <div class="conversion-case-cta">
+      <a class="btn btn-primary" href="#diagnostic">Identifier les cas d’usage de mon entreprise</a>
+    </div>
+  </div>
+</section>
+
+
+
 
 <section class="container" aria-label="Manifeste SR-IT">
   <div class="brand-manifesto">
@@ -1852,11 +2016,12 @@ section[aria-label="Manifeste SR-IT"] + .attention-section{
       <h3><a href="articles/audit-ia-serieux.html" class="title-link">Ce que doit produire un audit IA sérieux</a></h3>
       <p>Chez SR-IT, un audit ne se limite pas à une conversation commerciale. Il doit aboutir à des livrables utiles, réutilisables et directement exploitables pour décider, former et lancer les premiers chantiers.</p>
       <div class="audit-grid">
-        <div class="audit-card"><b>Cartographie des usages</b><span>Outils utilisés, pratiques réelles, zones de risque, niveau d’adoption.</span></div>
-        <div class="audit-card"><b>Scoring de maturité</b><span>Lecture claire par équipe, métier ou fonction pour séquencer les efforts.</span></div>
-        <div class="audit-card"><b>Matrice d’opportunités</b><span>Cas d’usage priorisés selon impact, effort, données et faisabilité.</span></div>
-        <div class="audit-card"><b>Roadmap & formation</b><span>Plan d’action sur plusieurs mois, responsabilités, besoins de montée en compétence.</span></div>
+        <div class="audit-card"><b>Cartographie des usages</b><span>Outils utilisés, pratiques réelles, irritants, zones de risque et niveau d’adoption.</span></div>
+        <div class="audit-card"><b>Matrice valeur / effort / risque</b><span>Cas d’usage comparés et priorisés selon impact, faisabilité, données et dépendances.</span></div>
+        <div class="audit-card"><b>Recommandations concrètes</b><span>Solutions envisageables, outils, niveau d’automatisation, validations humaines et points de vigilance.</span></div>
+        <div class="audit-card"><b>Feuille de route 30 / 60 / 90 jours</b><span>Premiers tests, responsabilités, besoins de formation et prochaines décisions à prendre.</span></div>
       </div>
+      <div class="audit-deliverable-note"><strong>Objectif :</strong> repartir avec des éléments utilisables pour décider, prioriser et lancer un premier chantier — pas seulement avec une présentation commerciale.</div>
     </div>
   </div>
 </section>
@@ -1934,8 +2099,8 @@ section[aria-label="Manifeste SR-IT"] + .attention-section{
   <div class="container">
     <div class="section-head">
       <span class="tag">Diagnostic IA & formation</span>
-      <h2>Définissons le besoin avant de choisir l’outil.</h2>
-      <p>Un diagnostic guidé pour comprendre vos irritants métier, vos processus, vos données, vos outils, vos contraintes de sécurité et le niveau de vos équipes. À la fin, le site affiche une première orientation : cas d’usage prioritaires, niveau de maturité et programmes de formation recommandés.</p>
+      <h2>Identifiez vos opportunités IA avant de choisir l’outil.</h2>
+      <p>En quelques minutes, décrivez vos irritants métier, vos processus, vos outils, vos données et vos contraintes. Vous obtenez une première orientation : opportunités prioritaires, niveau de maturité et formations potentiellement pertinentes. Cette orientation reste indicative et sert de base à un échange plus précis.</p>
     </div>
 
     <div class="smart-shell">
