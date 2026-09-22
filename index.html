@@ -1698,6 +1698,613 @@ a{transition:color .18s ease,opacity .18s ease}
   .container{width:auto !important;margin-left:18px !important;margin-right:18px !important}
 }
 
+
+/* ===== V68 — intégration éditoriale Curiosity / Attention ===== */
+.editorial-bridge{
+  margin-top:28px !important;
+  margin-bottom:28px !important;
+}
+.editorial-shell{
+  display:grid;
+  grid-template-columns:minmax(280px,.78fr) minmax(0,1.72fr);
+  border:1px solid #d9e4f1;
+  border-radius:22px;
+  overflow:hidden;
+  background:#fff;
+  box-shadow:0 16px 38px rgba(11,35,71,.07);
+}
+.editorial-manifesto{
+  position:relative;
+  padding:30px 30px 28px;
+  color:#fff;
+  background:
+    radial-gradient(circle at 100% 0%,rgba(50,148,255,.28),transparent 34%),
+    linear-gradient(135deg,#0b2d57 0%,#174e83 100%);
+}
+.editorial-manifesto:after{
+  content:"";
+  position:absolute;
+  right:-1px;
+  top:24px;
+  bottom:24px;
+  width:1px;
+  background:rgba(255,255,255,.18);
+}
+.editorial-label{
+  display:inline-flex;
+  margin-bottom:16px;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.10em;
+  color:#bcd8ff;
+}
+.editorial-manifesto h2{
+  margin:0 0 10px;
+  font-size:clamp(30px,3vw,44px);
+  line-height:1.02;
+  letter-spacing:-.035em;
+  color:#fff;
+}
+.editorial-manifesto p{
+  margin:0;
+  max-width:330px;
+  color:#e5eef9;
+  font-size:15px;
+  line-height:1.55;
+}
+.editorial-article{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 170px;
+  gap:26px;
+  align-items:center;
+  padding:28px 30px;
+  color:inherit;
+  text-decoration:none;
+  background:
+    radial-gradient(circle at 100% 0%,rgba(35,104,232,.08),transparent 32%),
+    linear-gradient(135deg,#ffffff,#f9fbfe);
+  transition:background .2s ease;
+}
+.editorial-article:hover{
+  background:
+    radial-gradient(circle at 100% 0%,rgba(35,104,232,.12),transparent 34%),
+    linear-gradient(135deg,#ffffff,#f5f9fe);
+}
+.editorial-eyebrow{
+  display:block;
+  margin-bottom:6px;
+  color:#667b98;
+  font-size:11px;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+}
+.editorial-article h3{
+  margin:0 0 8px;
+  color:#0d2447;
+  font-size:clamp(22px,2.25vw,31px);
+  line-height:1.12;
+  letter-spacing:-.025em;
+}
+.editorial-article p{
+  margin:0;
+  max-width:780px;
+  color:#425b7a;
+  font-size:15px;
+  line-height:1.6;
+}
+.editorial-link{
+  display:inline-flex;
+  gap:8px;
+  align-items:center;
+  margin-top:13px;
+  color:#1f62df;
+  font-size:14px;
+  font-weight:900;
+}
+.editorial-visual{
+  min-height:126px;
+  border-left:1px solid #dfe8f3;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  gap:8px;
+}
+.attention-token{
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.12em;
+  color:#163a68;
+}
+.attention-token.transformer{color:#1f62df}
+.attention-arrow{
+  color:#f07a2a;
+  font-size:22px;
+  line-height:1;
+}
+@media(max-width:900px){
+  .editorial-shell{grid-template-columns:1fr}
+  .editorial-manifesto:after{display:none}
+  .editorial-article{grid-template-columns:1fr}
+  .editorial-visual{
+    min-height:auto;
+    border-left:0;
+    border-top:1px solid #e3ebf5;
+    padding-top:18px;
+    flex-direction:row;
+  }
+}
+@media(max-width:560px){
+  .editorial-manifesto,.editorial-article{padding:24px 20px}
+  .editorial-manifesto h2{font-size:32px}
+}
+
+
+/* ===== V69 — refonte premium SR-IT ===== */
+:root{
+  --brand-navy:#0b2b55;
+  --brand-navy-2:#123c6d;
+  --brand-blue:#2468e8;
+  --brand-cyan:#24b8d8;
+  --brand-orange:#f28a39;
+  --ink:#102b50;
+  --muted:#607490;
+  --line:#dbe5f1;
+  --soft:#f5f8fc;
+  --soft-blue:#eef5ff;
+  --radius:20px;
+  --shadow:0 16px 42px rgba(12,39,76,.08);
+  --shadow-strong:0 22px 56px rgba(12,39,76,.13);
+}
+html{scroll-behavior:smooth}
+body{
+  color:var(--ink);
+  background:#fff;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+section{scroll-margin-top:92px}
+.container{
+  width:min(1180px,calc(100% - 40px)) !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
+.section-head{max-width:850px;margin-bottom:28px}
+.section-head h2{
+  margin-top:10px;
+  color:#0a2b59;
+  font-size:clamp(30px,3.1vw,44px);
+  line-height:1.08;
+  letter-spacing:-.03em;
+}
+.section-head p{color:#58708f;font-size:16px;line-height:1.7}
+.tag,.eyebrow,.kicker{
+  letter-spacing:.08em !important;
+  text-transform:uppercase;
+  font-weight:900 !important;
+}
+.tag{
+  display:inline-flex;
+  padding:7px 11px;
+  border-radius:999px;
+  background:#fff0e5 !important;
+  color:#c85c12 !important;
+  border:0 !important;
+}
+
+/* Header */
+.topbar{
+  position:sticky !important;
+  top:0 !important;
+  z-index:1000 !important;
+  background:rgba(255,255,255,.96) !important;
+  border-bottom:1px solid rgba(215,226,240,.95) !important;
+  box-shadow:0 5px 18px rgba(8,38,76,.045) !important;
+  backdrop-filter:blur(12px);
+}
+.topbar .inner{min-height:74px !important}
+.nav a{
+  font-weight:750 !important;
+  color:#263d5f !important;
+}
+.nav a:not(.nav-cta):hover{color:var(--brand-blue) !important}
+.nav .nav-cta{
+  border-radius:13px !important;
+  background:linear-gradient(135deg,var(--brand-blue),var(--brand-cyan)) !important;
+  color:#fff !important;
+  box-shadow:0 10px 22px rgba(36,104,232,.18) !important;
+}
+
+/* Hero */
+.hero{
+  position:relative;
+  overflow:hidden;
+  padding:70px 0 64px !important;
+  background:
+    radial-gradient(circle at 84% 16%,rgba(36,104,232,.15),transparent 27%),
+    linear-gradient(135deg,#081f3d 0%,#0d315c 58%,#15477a 100%) !important;
+}
+.hero:before{
+  content:"";
+  position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
+  background-size:42px 42px;
+  pointer-events:none;
+}
+.hero-grid{position:relative;z-index:1;gap:46px !important;align-items:center !important}
+.hero .eyebrow{
+  color:#b9d3f4 !important;
+  font-size:12px !important;
+}
+.hero h1{
+  max-width:720px;
+  margin:14px 0 18px;
+  color:#fff !important;
+  font-size:clamp(44px,5vw,66px) !important;
+  line-height:1.01 !important;
+  letter-spacing:-.045em !important;
+}
+.hero h1 span{color:#7fd8ff !important}
+.hero .lead{
+  max-width:680px;
+  margin:0;
+  color:#e4edf7 !important;
+  font-size:18px !important;
+  line-height:1.68 !important;
+}
+.hero .lead strong{color:#fff}
+.hero-actions{margin-top:28px !important}
+.btn{
+  border-radius:13px !important;
+  font-weight:850 !important;
+}
+.btn-primary{
+  background:linear-gradient(135deg,var(--brand-blue),var(--brand-cyan)) !important;
+  border:0 !important;
+  box-shadow:0 12px 26px rgba(25,111,225,.25) !important;
+}
+.btn-secondary{
+  background:rgba(255,255,255,.08) !important;
+  border:1px solid rgba(255,255,255,.28) !important;
+  color:#fff !important;
+}
+.hero-proofline{
+  display:flex !important;
+  flex-wrap:wrap;
+  gap:8px !important;
+  margin-top:22px !important;
+}
+.hero-proofline span{
+  padding:7px 10px !important;
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:999px;
+  background:rgba(255,255,255,.07);
+  color:#dce9f7 !important;
+  font-size:12px !important;
+}
+.hero-trustline{
+  display:flex;
+  flex-wrap:wrap;
+  gap:16px;
+  margin-top:16px;
+  color:#a9bfd9;
+  font-size:12px;
+}
+.hero-trustline span{display:flex;align-items:center;gap:7px}
+.hero-trustline span:before{
+  content:"";
+  width:6px;height:6px;border-radius:50%;
+  background:#56d6b1;
+  box-shadow:0 0 0 4px rgba(86,214,177,.11);
+}
+.hero-contact{
+  border:1px solid rgba(255,255,255,.12) !important;
+  border-radius:22px !important;
+  background:rgba(255,255,255,.98) !important;
+  box-shadow:0 26px 70px rgba(0,0,0,.22) !important;
+}
+.hero-contact h3{
+  color:#0b2b55 !important;
+  font-size:22px !important;
+}
+.hero-contact label{font-weight:750 !important;color:#36506f !important}
+.hero-contact input,.hero-contact select,.hero-contact textarea{
+  border:1px solid #dce5f1 !important;
+  border-radius:10px !important;
+  background:#fbfdff !important;
+}
+.hero-contact input:focus,.hero-contact select:focus,.hero-contact textarea:focus{
+  outline:none !important;
+  border-color:#75a8f2 !important;
+  box-shadow:0 0 0 3px rgba(36,104,232,.10) !important;
+}
+.hero-contact .btn-secondary{
+  background:#f4f7fb !important;
+  color:#17365f !important;
+  border:1px solid #d9e4f0 !important;
+}
+
+/* Major homepage sections */
+.home-agents,.training-catalog,.tech-showcase,.usecase-visuals,.conversion-cases{
+  padding-top:72px !important;
+  padding-bottom:72px !important;
+}
+.home-agents{background:#f4f8fd !important}
+.home-agents .container{
+  gap:42px !important;
+  align-items:center !important;
+}
+.home-agents-copy h2{
+  color:#0a2b59;
+  font-size:clamp(34px,3.8vw,50px) !important;
+  line-height:1.05 !important;
+  letter-spacing:-.035em !important;
+}
+.home-agents-copy p{color:#58708f !important;font-size:17px !important;line-height:1.7 !important}
+.home-agents-image{
+  border-radius:24px !important;
+  border:1px solid #d9e5f3 !important;
+  background:#fff !important;
+  padding:9px !important;
+  box-shadow:var(--shadow-strong) !important;
+}
+.home-agents-image img{border-radius:16px !important}
+.home-agent-pills span{
+  border:1px solid #d8e4f2 !important;
+  background:#fff !important;
+  color:#26486f !important;
+  font-weight:750 !important;
+}
+
+/* Programmes de formation — pictos discrets sans changer la taille des cartes */
+.program{
+  position:relative !important;
+  overflow:hidden !important;
+  border:1px solid #d9e5f2 !important;
+  border-top:3px solid transparent !important;
+  border-image:linear-gradient(90deg,var(--brand-orange),var(--brand-blue)) 1 !important;
+  border-radius:18px !important;
+  background:#fff !important;
+  box-shadow:0 12px 30px rgba(12,39,76,.06) !important;
+  transition:transform .18s ease,box-shadow .18s ease !important;
+}
+.program:hover{
+  transform:translateY(-3px);
+  box-shadow:0 18px 40px rgba(12,39,76,.10) !important;
+}
+.program:after{
+  content:"";
+  position:absolute;
+  right:18px;top:42px;
+  width:54px;height:54px;
+  opacity:.92;
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:contain;
+  pointer-events:none;
+}
+.catalog-grid .program:nth-child(1):after{
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='%232468e8' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M22 42c-5-3-8-8-8-14a18 18 0 0136 0c0 6-3 11-8 14v5H22z'/%3E%3Cpath d='M25 52h14M29 57h6M23 27h18M32 18v18'/%3E%3C/g%3E%3C/svg%3E");
+}
+.catalog-grid .program:nth-child(2):after{
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='%232468e8' stroke-width='3' stroke-linecap='round'%3E%3Crect x='8' y='11' width='48' height='40' rx='6'/%3E%3Cpath d='M8 21h48M16 32h22M16 40h30'/%3E%3C/g%3E%3Cpath d='M48 29l3 6 6 3-6 3-3 6-3-6-6-3 6-3z' fill='%2324b8d8'/%3E%3C/svg%3E");
+}
+.catalog-grid .program:nth-child(3):after{
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='%232468e8' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='5' y='8' width='14' height='14' rx='3'/%3E%3Crect x='45' y='8' width='14' height='14' rx='3'/%3E%3Crect x='25' y='42' width='14' height='14' rx='3'/%3E%3Cpath d='M19 15h26M32 22v20'/%3E%3C/g%3E%3C/svg%3E");
+}
+.catalog-grid .program:nth-child(4):after{
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='%232468e8' stroke-width='3'%3E%3Cellipse cx='21' cy='15' rx='13' ry='6'/%3E%3Cpath d='M8 15v18c0 8 26 8 26 0V15M8 24c0 8 26 8 26 0'/%3E%3Ccircle cx='45' cy='39' r='10'/%3E%3Cpath d='M52 46l8 8' stroke-linecap='round'/%3E%3C/g%3E%3C/svg%3E");
+}
+.catalog-grid .program:nth-child(5):after{
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='%232468e8' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='19' y='18' width='26' height='22' rx='6'/%3E%3Ccircle cx='28' cy='29' r='2' fill='%232468e8'/%3E%3Ccircle cx='36' cy='29' r='2' fill='%232468e8'/%3E%3Cpath d='M32 18v-6M29 8h6M25 40v6M39 40v6M19 25h-6M45 25h6'/%3E%3C/g%3E%3C/svg%3E");
+}
+.catalog-grid .program:nth-child(6):after{
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='%232468e8' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M10 49h44M16 45V32h8v13M28 45V23h8v22M40 45V14h8v31'/%3E%3Cpath d='M45 12l4-5 5 4' stroke='%23f28a39'/%3E%3C/g%3E%3C/svg%3E");
+}
+.catalog-grid .program:nth-child(7):after{
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='%232468e8' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M32 7l18 7v14c0 12-8 21-18 27-10-6-18-15-18-27V14z'/%3E%3Cpath d='M23 31l6 6 12-14'/%3E%3C/g%3E%3C/svg%3E");
+}
+.catalog-grid .program:nth-child(8):after{
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='%232468e8' stroke-width='3' stroke-linecap='round'%3E%3Ccircle cx='28' cy='28' r='15'/%3E%3Ccircle cx='28' cy='28' r='7'/%3E%3Cpath d='M39 17l12-9M46 8h6v6M12 49h40'/%3E%3C/g%3E%3C/svg%3E");
+}
+.catalog-grid .program:nth-child(9):after{
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='%232468e8' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M11 50c10-24 22-28 42-36'/%3E%3Ccircle cx='14' cy='46' r='4'/%3E%3Ccircle cx='30' cy='31' r='4'/%3E%3Ccircle cx='48' cy='17' r='4'/%3E%3Cpath d='M50 9h8v8' stroke='%23f28a39'/%3E%3C/g%3E%3C/svg%3E");
+}
+.program h3{max-width:78%;color:#0d2b55 !important}
+.program .aud{color:#c65d13 !important;font-weight:900 !important}
+.program p,.program li{color:#536a88 !important}
+.program-read{font-weight:850 !important}
+
+/* Tech */
+.tech-showcase{background:#fff !important}
+.tech-editorial,.tech-card{
+  border:1px solid #dbe6f2 !important;
+  border-radius:20px !important;
+  box-shadow:0 12px 30px rgba(12,39,76,.06) !important;
+}
+.tech-point{
+  border-radius:14px !important;
+  background:#f7faff !important;
+}
+.tech-point .badge{
+  background:#eaf2ff !important;
+  color:#1f62df !important;
+}
+
+/* Applications */
+.usecase-visuals{background:#f6f9fd !important}
+.usecase-wrap{
+  border:1px solid #dae5f1 !important;
+  border-radius:22px !important;
+  box-shadow:var(--shadow) !important;
+}
+.usecase-photo{overflow:hidden !important}
+.usecase-photo img{transition:transform .35s ease,filter .35s ease !important}
+.usecase-photo:hover img{transform:scale(1.025);filter:saturate(1.05)}
+
+/* Conversion cases */
+.conversion-cases{background:#fff !important}
+.conversion-case{
+  border:1px solid #dbe6f2 !important;
+  border-radius:18px !important;
+  box-shadow:0 10px 26px rgba(12,39,76,.05) !important;
+}
+.case-number{
+  background:#eaf2ff !important;
+  color:#1f62df !important;
+}
+.case-arrow{color:#7f9bbb !important}
+
+/* Offer + services */
+.pillars,.service-grid{gap:18px !important}
+.pillar,.service{
+  border:1px solid #dae5f1 !important;
+  border-radius:18px !important;
+  background:#fff !important;
+  box-shadow:0 10px 28px rgba(12,39,76,.055) !important;
+}
+.card-link:hover .pillar,.card-link:hover .service{
+  transform:translateY(-3px);
+  box-shadow:0 18px 38px rgba(12,39,76,.09) !important;
+}
+.service .ico{
+  background:linear-gradient(135deg,#eaf2ff,#f5f9ff) !important;
+  color:#1f62df !important;
+  border:1px solid #d6e4f7 !important;
+}
+.pillar .n,.format .label{color:#c65d13 !important}
+
+/* Audit */
+.audit-band{
+  border-radius:22px !important;
+  background:linear-gradient(135deg,#0b2c57,#184c7e) !important;
+  box-shadow:var(--shadow-strong) !important;
+}
+.audit-card{
+  border:1px solid rgba(255,255,255,.14) !important;
+  background:rgba(255,255,255,.07) !important;
+  border-radius:14px !important;
+}
+.audit-deliverable-note{
+  border-radius:14px !important;
+  background:rgba(255,255,255,.09) !important;
+}
+
+/* Method timeline */
+.timeline{
+  position:relative;
+  gap:16px !important;
+}
+.timeline:before{
+  content:"";
+  position:absolute;
+  left:8%;right:8%;top:27px;
+  height:2px;
+  background:linear-gradient(90deg,#cfe0f8,#6da2ee,#cfe0f8);
+  z-index:0;
+}
+.timeline .step{
+  position:relative;
+  z-index:1;
+  border:1px solid #dbe6f2 !important;
+  border-radius:18px !important;
+  background:#fff !important;
+  box-shadow:0 10px 26px rgba(12,39,76,.05) !important;
+}
+.timeline .num{
+  background:linear-gradient(135deg,var(--brand-blue),var(--brand-cyan)) !important;
+  color:#fff !important;
+  box-shadow:0 0 0 6px #fff !important;
+}
+
+/* Formats */
+.format{
+  border:1px solid #dbe6f2 !important;
+  border-radius:18px !important;
+  background:#fff !important;
+  box-shadow:0 10px 26px rgba(12,39,76,.05) !important;
+}
+
+/* Editorial bridge */
+.editorial-shell{
+  box-shadow:0 14px 38px rgba(12,39,76,.07) !important;
+}
+
+/* Diagnostic */
+.smart-diagnostic{
+  background:linear-gradient(180deg,#f4f8fd,#fff) !important;
+  padding-top:76px !important;
+  padding-bottom:76px !important;
+}
+.smart-shell{
+  border:1px solid #d9e5f2 !important;
+  border-radius:22px !important;
+  box-shadow:var(--shadow) !important;
+}
+.smart-step.active{
+  background:linear-gradient(135deg,var(--brand-blue),var(--brand-cyan)) !important;
+  color:#fff !important;
+}
+.segment span{
+  border-radius:12px !important;
+  border-color:#dbe6f2 !important;
+}
+.segment input:checked + span{
+  border-color:#7ca9ed !important;
+  background:#eef5ff !important;
+  color:#123d72 !important;
+}
+
+/* Final CTA */
+.cta-band{
+  border-radius:22px !important;
+  background:linear-gradient(135deg,#0b2c57,#174d81) !important;
+  box-shadow:var(--shadow-strong) !important;
+}
+
+/* Articles / formations inner pages */
+.main .article{
+  color:#203b5f !important;
+}
+.main .article h2,.main .article h3{
+  color:#0b2b55 !important;
+  letter-spacing:-.02em;
+}
+.aside{
+  border-radius:18px !important;
+  border:1px solid #dce6f1 !important;
+  box-shadow:0 10px 28px rgba(12,39,76,.055) !important;
+}
+.hero-visual{
+  border-color:#dce6f1 !important;
+  box-shadow:0 16px 38px rgba(12,39,76,.09) !important;
+}
+
+/* Footer */
+.footer{
+  background:#f7f9fc !important;
+  border-top:1px solid #e0e8f1 !important;
+  color:#637690 !important;
+}
+
+/* Responsive */
+@media(max-width:950px){
+  .container{width:auto !important;margin-left:18px !important;margin-right:18px !important}
+  .hero{padding:48px 0 42px !important}
+  .hero h1{font-size:clamp(38px,10vw,52px) !important}
+  .hero-grid{gap:28px !important}
+  .timeline:before{display:none}
+}
+@media(max-width:620px){
+  .home-agents,.training-catalog,.tech-showcase,.usecase-visuals,.conversion-cases,
+  .smart-diagnostic{padding-top:48px !important;padding-bottom:48px !important}
+  .program:after{width:44px;height:44px;right:14px;top:40px}
+  .program h3{max-width:80%}
+}
+
 </style>
 </head>
 <body>
@@ -1736,8 +2343,8 @@ a{transition:color .18s ease,opacity .18s ease}
 <section class="hero" id="top-contact">
   <div class="container hero-grid">
     <div>
-      <span class="eyebrow">Conseil IA opérationnel • SR-IT</span>
-      <h1>Et si l’IA pouvait vous faire gagner <span>jusqu’à 2 heures par jour</span> ?</h1>
+      <span class="eyebrow">Conseil • Audit • Formation • Automatisation IA</span>
+      <h1>Transformez vos irritants métier en <span>gains de temps concrets</span> grâce à l’IA.</h1>
       <p class="lead">Automatisez ce qui peut l’être. Accélérez ce qui compte.<br><br>SR-IT vous aide à identifier les tâches chronophages, prioriser les bons cas d’usage et déployer des solutions IA concrètes pour votre entreprise.</p>
       <div class="hero-actions">
         <a href="#diagnostic" class="btn btn-primary">Identifier mes opportunités IA</a>
@@ -1746,12 +2353,17 @@ a{transition:color .18s ease,opacity .18s ease}
       <div class="hero-proofline">
         <span>≈ 5 minutes</span>
         <span>Gratuit</span>
-        <span>Première priorisation de vos cas d’usage</span>
+        <span>Première priorisation</span>
       </div>
+<div class="hero-trustline" aria-label="Approche SR-IT">
+  <span>Besoin métier d’abord</span>
+  <span>Validation humaine</span>
+  <span>Intégration à l’existant</span>
+</div>
     </div>
     
 <div class="hero-contact">
-  <h3>Contact rapide</h3>
+  <h3>Parlons de votre cas d’usage</h3>
   <form  method="POST" name="contact-srit" data-netlify="true" action="/"><input type="hidden" name="form-name" value="contact-srit">
 
     <div class="contact-grid">
@@ -1802,7 +2414,7 @@ a{transition:color .18s ease,opacity .18s ease}
       <a href="mailto:salim.mechehar@gmail.com?subject=Demande%20de%20rendez-vous%20SR-IT">Prendre rendez-vous</a>
     </div>
 
-    <div id="contactStatus" class="form-status" aria-live="polite"></div><div class="micro">Premier échange sans engagement · Visio, téléphone ou sur site</div>
+    <div id="contactStatus" class="form-status" aria-live="polite"></div><div class="micro">Premier échange sans engagement · Réponse rapide · Visio, téléphone ou sur site</div>
   </form>
 </div>
   </div>
@@ -1812,8 +2424,8 @@ a{transition:color .18s ease,opacity .18s ease}
   <div class="container">
     <div class="home-agents-copy">
       <span class="tag">Agents IA métier</span>
-      <h2>Des agents qui travaillent dans vos vrais processus</h2>
-      <p>Commercial, service client, téléphone, RH, finance, achats, juridique, marketing ou opérations : découvrez concrètement ce qu’un agent IA peut préparer, rechercher, automatiser ou transmettre à vos équipes.</p>
+      <h2>9 agents IA métier, expliqués par des cas d’usage concrets</h2>
+      <p>Commercial, service client, téléphone, RH, finance, achats, juridique, marketing ou opérations : voyez ce qu’un agent peut réellement préparer, rechercher, automatiser et transmettre — avec validation humaine lorsque nécessaire.</p>
       <div class="home-agent-pills">
         <span>Commercial</span><span>Service client</span><span>RH</span><span>Finance</span><span>Achats</span><span>Juridique</span><span>Opérations</span>
       </div>
@@ -1829,8 +2441,8 @@ a{transition:color .18s ease,opacity .18s ease}
   <div class="container">
     <div class="section-head">
       <span class="tag">Programmes de formation</span>
-      <h2>Des parcours modulaires adaptés au niveau et au métier</h2>
-      <p>Le diagnostic recommande automatiquement les modules les plus pertinents. Les durées et exercices sont ensuite ajustés au contexte réel de l’entreprise, à ses outils et à ses cas d’usage. Chaque programme ci-dessous dispose maintenant d’une page détaillée.</p>
+      <h2>Des formations opérationnelles, adaptées au niveau et au métier</h2>
+      <p>Pas de programme générique : les modules, durées et exercices sont ajustés à vos équipes, vos outils et vos cas d’usage. Chaque parcours dispose d’un programme détaillé et peut être adapté à votre contexte.</p>
     </div>
 
     <div class="catalog-grid">
@@ -1913,8 +2525,8 @@ a{transition:color .18s ease,opacity .18s ease}
   <div class="container">
     <div class="section-head">
       <span class="tag">Architecture & technologies</span>
-      <h2>Des solutions adaptées au besoin, pas une technologie imposée.</h2>
-      <p>Selon le contexte, le bon choix peut être une automatisation simple, un assistant documentaire, un workflow enrichi par l’IA ou un agent capable d’utiliser plusieurs outils. L’architecture doit rester compréhensible, gouvernable et proportionnée au besoin métier.</p>
+      <h2>La bonne architecture, au bon niveau de complexité.</h2>
+      <p>Automatisation simple, assistant documentaire, RAG, agent ou intégration API : le choix dépend du besoin, des données, des risques et du niveau d’autonomie attendu. La technologie vient après le cas d’usage.</p>
     </div>
 
     <div class="intro-grid">
@@ -1988,7 +2600,7 @@ a{transition:color .18s ease,opacity .18s ease}
       <div class="usecase-head">
         <div>
           <span class="tag">Applications concrètes</span>
-          <h3 style="margin-top:10px">De la formation à l’automatisation opérationnelle</h3>
+          <h3 style="margin-top:10px">Trois façons de passer de l’idée à l’usage</h3>
         </div>
         <p>Les technologies n’ont d’intérêt que si elles améliorent un processus réel : réduire les tâches répétitives, mieux exploiter l’information et donner aux équipes les bons outils.</p>
       </div>
@@ -2014,7 +2626,7 @@ a{transition:color .18s ease,opacity .18s ease}
   <div class="container">
     <div class="section-head conversion-head">
       <span class="tag">Cas concrets</span>
-      <h2>Du problème quotidien à un processus réellement amélioré</h2>
+      <h2>Avant / après : ce que l’IA peut réellement changer</h2>
       <p>Quelques scénarios typiques pour comprendre ce qui change concrètement. Les solutions sont adaptées à vos outils, vos données et vos règles de validation.</p>
     </div>
 
@@ -2062,49 +2674,38 @@ a{transition:color .18s ease,opacity .18s ease}
 
 
 
-<section class="container" aria-label="Manifeste SR-IT">
-  <div class="brand-manifesto">
-    <span class="en">Curiosity is all you need.</span>
-    <span class="fr">Comprendre, tester, apprendre — puis transformer l’IA en résultats concrets.</span>
+
+<section class="container editorial-bridge" aria-label="Culture et innovation IA">
+  <div class="editorial-shell">
+    <div class="editorial-manifesto">
+      <span class="editorial-label">CULTURE & INNOVATION</span>
+      <h2>Curiosity is all you need.</h2>
+      <p>Comprendre, tester, apprendre — puis transformer l’IA en résultats concrets.</p>
+    </div>
+
+    <a class="editorial-article" href="articles/attention-is-all-you-need.html">
+      <div class="editorial-article-copy">
+        <span class="editorial-eyebrow">Transformer · Self-attention · 2017</span>
+        <h3>“Attention Is All You Need” : le papier qui a changé l’IA</h3>
+        <p>Comprendre simplement le Transformer, la self-attention et pourquoi cette architecture est devenue centrale dans l’IA générative moderne.</p>
+        <span class="editorial-link">Découvrir l’article <span aria-hidden="true">→</span></span>
+      </div>
+      <div class="editorial-visual" aria-hidden="true">
+        <div class="attention-token">ATTENTION</div>
+        <div class="attention-arrow">→</div>
+        <div class="attention-token transformer">TRANSFORMER</div>
+      </div>
+    </a>
   </div>
 </section>
-<section class="container attention-section">
-  <a class="attention-feature" href="articles/attention-is-all-you-need.html">
-    <div class="attention-badge">CULTURE IA</div>
-    <div class="attention-copy">
-      <div class="attention-eyebrow">Transformer · Self-attention · 2017</div>
-      <h3>“Attention Is All You Need” : le papier qui a changé l’IA</h3>
-      <p>Comprendre simplement le Transformer, la self-attention et pourquoi cette architecture est devenue centrale dans l’IA générative moderne.</p>
-      <span class="attention-read">Lire l’article <span aria-hidden="true">→</span></span>
-    </div>
-    <div class="attention-mark" aria-hidden="true">
-      <span>ATTENTION</span>
-      <strong>→</strong>
-      <span>TRANSFORMER</span>
-    </div>
-  </a>
-</section>
 
-
-
-<div class="proof-strip">
-  <div class="container">
-    <div class="proof">
-      <div class="proof-item"><div class="k">Approche</div><div class="v">Pragmatique, orientée métier et résultats</div></div>
-      <div class="proof-item"><div class="k">Formats</div><div class="v">Visio, sur site ou mode hybride</div></div>
-      <div class="proof-item"><div class="k">Interventions</div><div class="v">Audit, feuille de route, formation, automatisation</div></div>
-      <div class="proof-item"><div class="k">Positionnement</div><div class="v">Cabinet agile pour PME, directions métiers et équipes projet</div></div>
-    </div>
-  
-</div>
-</div>
 
 <section id="offre">
   <div class="container">
     <div class="section-head">
       <span class="tag">Positionnement</span>
-      <h2>Une offre structurée autour de vos enjeux métier</h2>
-      <p>Audit, formation, cadrage et mise en œuvre : chaque mission part de vos processus, de vos contraintes et des résultats attendus. L’objectif est d’identifier les usages réellement utiles, puis de les déployer avec un niveau de maîtrise adapté à votre organisation.</p>
+      <h2>Un accompagnement de bout en bout, sans surdimensionner la solution</h2>
+      <p>Audit, cadrage, formation, automatisation et intégration : chaque mission part d’un problème concret, des contraintes de votre SI et des résultats attendus. L’objectif est de déployer juste ce qu’il faut, au bon niveau de maîtrise.</p>
     </div>
     <div class="pillars">
   <a class="card-link" href="articles/strategie-ia.html">
@@ -2186,7 +2787,7 @@ a{transition:color .18s ease,opacity .18s ease}
   <div class="container">
     <div class="section-head">
       <span class="tag">Méthode</span>
-      <h2>Un déroulé lisible du premier échange à la mise en œuvre</h2>
+      <h2>Une méthode simple : comprendre, prioriser, tester, déployer</h2>
     </div>
     <div class="timeline">
       <div class="step"><div class="num">1</div><h3><a href="articles/methode-comprendre-analyser-decider-deployer.html" class="title-link">Comprendre</a></h3><p>Premier échange, clarification du besoin, périmètre, enjeux, acteurs clés et contraintes.</p></div>
@@ -2201,7 +2802,7 @@ a{transition:color .18s ease,opacity .18s ease}
   <div class="container">
     <div class="section-head">
       <span class="tag">Formats d’intervention</span>
-      <h2>Visio, sur site ou hybride</h2>
+      <h2>Le bon format selon votre besoin et vos équipes</h2>
       <p>Le format d’intervention s’adapte au contexte client : diagnostic rapide à distance, ateliers sur site avec les équipes, ou accompagnement mixte selon la phase du projet.</p>
     </div>
     <div class="formats">
@@ -2588,8 +3189,8 @@ a{transition:color .18s ease,opacity .18s ease}
   <div class="container">
     <div class="cta-band">
       <div>
-        <h3>Prêt à structurer vos usages IA ?</h3>
-        <p>SR-IT accompagne les entreprises dans l’identification, la priorisation, la formation et la mise en œuvre d’usages IA concrets, utiles et maîtrisés.</p>
+        <h3>Un premier cas d’usage à cadrer ?</h3>
+        <p>Commencez par identifier où l’IA peut réellement créer de la valeur, avant de choisir un outil ou une architecture.</p>
       </div>
       <a href="#diagnostic" class="btn btn-primary">Commencer le diagnostic</a>
     </div>
